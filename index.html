@@ -42,7 +42,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Evan Kiess" width="80">
+          <img class = "avatar-image" src="./assets/images/headshot.jpeg" alt="Evan Kiess" width="80">
         </figure>
 
         <div class="info-content">
@@ -93,16 +93,16 @@
 
           </li>
 
-          <li class="linkedin">
+          <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="linkedin"></ion-icon>
+              <ion-icon name="logo-linkedin"></ion-icon>
             </div>
 
-            <div class="linkedin">
-              <p class="linkedin">LinkedIn</p>
+            <div class="contact-info">
+              <p class="contact-title">LinkedIn</p>
 
-              <a href="https://www.linkedin.com/in/evan-kiess/" class="contact-link">https://www.linkedin.com/in/evan-kiess/</a>
+              <a href="https://www.linkedin.com/in/evan-kiess/" class="contact-link" style="color: rgb(66, 133, 244); text-decoration: underline;">evan-kiess</a>
             </div>
 
           </li>
@@ -177,17 +177,17 @@
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
 
-          <li class="navbar-item">
+          <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
+          </li> -->
 
-          <li class="navbar-item">
+          <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
           </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
+          </li> -->
 
         </ul>
 
@@ -299,7 +299,7 @@
         <!--
           - testimonials
         -->
-
+<!-- 
         <section class="testimonials">
 
           <h3 class="h3 testimonials-title">Testimonials</h3>
@@ -397,12 +397,12 @@
           </ul>
 
         </section>
-
+ -->
 
         <!--
           - testimonials modal
         -->
-
+<!-- 
         <div class="modal-container" data-modal-container>
 
           <div class="overlay" data-overlay></div>
@@ -442,12 +442,12 @@
           </section>
 
         </div>
-
+ -->
 
         <!--
           - clients
         -->
-
+<!-- 
         <section class="clients">
 
           <h3 class="h3 clients-title">Clients</h3>
@@ -490,6 +490,111 @@
               </a>
             </li>
 
+          </ul>
+
+        </section> -->
+
+
+        <!-- projects -->
+      <!-- <article class="portfolio" data-page="portfolio"> -->
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <!-- <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul> -->
+
+          <!-- <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div> -->
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="embedded">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="tiny-tuner" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Tiny Tuner</h3>
+
+                <p class="project-category">Compact guitar tuner made with ESP32 and MEMS microphone</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="mechanical">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="puzzlecube" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">PuzzleCube</h3>
+
+                <p class="project-category">Designed for adults with Autism and other intellecual disabilities.</p>
+
+              </a>
+            </li>
           </ul>
 
         </section>
@@ -697,7 +802,7 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <!-- <article class="portfolio" data-page="portfolio">
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
@@ -927,7 +1032,7 @@
 
         </section>
 
-      </article>
+      </article> -->
 
 
 
@@ -937,7 +1042,7 @@
         - #BLOG
       -->
 
-      <article class="blog" data-page="blog">
+      <!-- <article class="blog" data-page="blog">
 
         <header>
           <h2 class="h2 article-title">Blog</h2>
@@ -1119,7 +1224,7 @@
 
         </section>
 
-      </article>
+      </article> -->
 
 
 
@@ -1128,7 +1233,7 @@
       <!--
         - #CONTACT
       -->
-
+<!-- 
       <article class="contact" data-page="contact">
 
         <header>
@@ -1166,7 +1271,7 @@
 
         </section>
 
-      </article>
+      </article> -->
 
     </div>
 
