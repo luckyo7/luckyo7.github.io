@@ -1,131 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evan Kiess - Portfolio</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evan Kiess - Portfolio</title>
-
-  <!--
+    <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
 
-  <!--
+    <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!--
+    <!--
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
-  <!--
+  <body>
+    <!--
     - #MAIN
   -->
 
-  <main>
-
-    <!--
+    <main>
+      <!--
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar>
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              class="avatar-image"
+              src="./assets/images/headshot.jpeg"
+              alt="Evan Kiess"
+              width="80"
+            />
+          </figure>
 
-      <div class="sidebar-info">
+          <div class="info-content">
+            <h1 class="name" title="Evan Kiess">Evan Kiess</h1>
 
-        <figure class="avatar-box">
-          <img class = "avatar-image" src="./assets/images/headshot.jpeg" alt="Evan Kiess" width="80">
-        </figure>
+            <p class="title">Biomedical Engineer</p>
+          </div>
 
-        <div class="info-content">
-          <h1 class="name" title="Evan Kiess">Evan Kiess</h1>
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
 
-          <p class="title">Biomedical Engineer</p>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
 
-      </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
 
-      <div class="sidebar-info_more">
+                <a href="mailto:ekiess@unc.edu" class="contact-link"
+                  >ekiess@unc.edu</a
+                >
+              </div>
+            </li>
 
-        <div class="separator"></div>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
 
-        <ul class="contacts-list">
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
 
-          <li class="contact-item">
+                <a href="tel:+12529169097" class="contact-link"
+                  >(252) 916-9097</a
+                >
+              </div>
+            </li>
 
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </div>
 
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
+              <div class="contact-info">
+                <p class="contact-title">LinkedIn</p>
 
-              <a href="mailto:ekiess@unc.edu" class="contact-link">ekiess@unc.edu</a>
-            </div>
+                <a
+                  href="https://www.linkedin.com/in/evan-kiess/"
+                  target="_blank"
+                  class="contact-link"
+                  style="
+                    color: var(--white-2);
+                    text-decoration: underline;
+                    text-decoration-thickness: 0.8px;
+                  "
+                  >evan-kiess</a
+                >
+              </div>
+            </li>
 
-          </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
 
-          <li class="contact-item">
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
 
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
+                <address>Chapel Hill, North Carolina</address>
+              </div>
+            </li>
+          </ul>
 
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
+          <!-- <div class="separator"></div> -->
 
-              <a href="tel:+12529169097" class="contact-link">(252) 916-9097</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">LinkedIn</p>
-
-              <a href="https://www.linkedin.com/in/evan-kiess/" target="_blank" class="contact-link" style="color: var(--white-2); text-decoration: underline; text-decoration-thickness: 0.8px;">evan-kiess</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Chapel Hill, North Carolina<address>
-            </div>
-
-          </li>
-
-        </ul>
-        
-        <!-- <div class="separator"></div> -->
-
-        <!-- <ul class="social-list"> -->
+          <!-- <ul class="social-list"> -->
 
           <!-- <li class="social-item">
             <a href="#" class="social-link">
@@ -145,82 +154,73 @@
             </a>
           </li> -->
 
-        <!-- </ul> -->
+          <!-- </ul> -->
+        </div>
+      </aside>
 
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
+      <!--
       - #main-content
     -->
 
-    <div class="main-content">
-
-      <!--
+      <div class="main-content">
+        <!--
         - #NAVBAR
       -->
 
-      <nav class="navbar">
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
 
-        <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>TinyTuner</button>
+            </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <!-- <li class="navbar-item">
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>PuzzleCube</button>
+            </li>
+            <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li> -->
 
-          <!-- <li class="navbar-item">
+            <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
           </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
           </li> -->
+          </ul>
+        </nav>
 
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
+        <!--
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
+          <section class="about-text">
+            <p>
+              My name is Evan Kiess, and I'm a sophomore studying biomedical
+              engineering at the joint department of BME at UNC and NC State. My
+              interests include microcontrollers, embedded systems, and
+              mechanical design.
+            </p>
+          </section>
 
-        <section class="about-text">
-          <p>
-            My name is Evan Kiess, and I'm a sophomore studying biomedical engineering at the joint department of BME at UNC and NC State.
-            My interests include microcontrollers, embedded systems, and mechanical design. 
-          </p>
-
-        </section>
-
-
-        <!--
+          <!--
           - service
         -->
 
-        <!-- <section class="service">
+          <!-- <section class="service">
 
           <h3 class="h3 service-title">What i'm doing</h3>
 
@@ -296,10 +296,10 @@
         </section>
  -->
 
-        <!--
+          <!--
           - testimonials
         -->
-<!-- 
+          <!-- 
         <section class="testimonials">
 
           <h3 class="h3 testimonials-title">Testimonials</h3>
@@ -399,10 +399,10 @@
         </section>
  -->
 
-        <!--
+          <!--
           - testimonials modal
         -->
-<!-- 
+          <!-- 
         <div class="modal-container" data-modal-container>
 
           <div class="overlay" data-overlay></div>
@@ -444,10 +444,10 @@
         </div>
  -->
 
-        <!--
+          <!--
           - clients
         -->
-<!-- 
+          <!-- 
         <section class="clients">
 
           <h3 class="h3 clients-title">Clients</h3>
@@ -494,17 +494,15 @@
 
         </section> -->
 
+          <!-- projects -->
+          <!-- <article class="portfolio" data-page="portfolio"> -->
 
-        <!-- projects -->
-      <!-- <article class="portfolio" data-page="portfolio"> -->
+          <header>
+            <h2 class="h2 article-title">Projects</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-
-        <section class="projects">
-
-          <!-- <ul class="filter-list">
+          <section class="projects">
+            <!-- <ul class="filter-list">
 
             <li class="filter-item">
               <button class="active" data-filter-btn>All</button>
@@ -524,7 +522,7 @@
 
           </ul> -->
 
-          <!-- <div class="filter-select-box">
+            <!-- <div class="filter-select-box">
 
             <button class="filter-select" data-select>
 
@@ -558,83 +556,112 @@
 
           </div> -->
 
-          <ul class="project-list">
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="embedded"
+              >
+                <a href="#">
+                  <figure class="project-img tinytuner" project-img>
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-            <li class="project-item  active" data-filter-item data-category="embedded">
-              <a href="#">
+                    <img
+                      src="./assets/images/project-1.jpg"
+                      alt="tinytuner"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                  <h3 class="project-title">Tiny Tuner</h3>
 
-                  <img src="./assets/images/project-1.jpg" alt="tiny-tuner" loading="lazy">
-                </figure>
+                  <p class="project-category">
+                    Compact guitar tuner made with ESP32 and MEMS microphone
+                  </p>
+                </a>
+              </li>
 
-                <h3 class="project-title">Tiny Tuner</h3>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="mechanical"
+              >
+                <a href="#">
+                  <figure class="project-img puzzlecube" project-img>
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-                <p class="project-category">Compact guitar tuner made with ESP32 and MEMS microphone</p>
+                    <img
+                      src="./assets/images/project-2.png"
+                      alt="puzzlecube"
+                      loading="lazy"
+                    />
+                  </figure>
 
-              </a>
-            </li>
+                  <h3 class="project-title">PuzzleCube</h3>
 
-            <li class="project-item  active" data-filter-item data-category="mechanical">
-              <a href="#">
+                  <p class="project-category">
+                    Designed for adults with Autism and other intellecual
+                    disabilities.
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="puzzlecube" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">PuzzleCube</h3>
-
-                <p class="project-category">Designed for adults with Autism and other intellecual disabilities.</p>
-
-              </a>
-            </li>
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
+          <a
+            href="./assets/evan_kiess_resume.pdf"
+            class="contact-link"
+            target="_blank"
+            style="color: var(--light-gray); text-decoration: underline"
+            >Download PDF</a
+          >
 
-        <a href="./assets/evan_kiess_resume.pdf" class="contact-link" target="_blank" style="color: var(--light-gray); text-decoration: underline;">Download PDF</a>
+          <div class="separator"></div>
 
-        <div class="separator"></div>
+          <div class="pdf-container">
+            <iframe
+              src="./assets/evan_kiess_resume.pdf#view=FitV&toolbar=0"
+              frameborder="0"
+            ></iframe>
+            <!--  <iframe src="./assets/evan_kiess_resume.pdf#zoom=page-fit&view=FitV" frameborder="0"></iframe> -->
+          </div>
+        </article>
 
-        <div class="pdf-container">
-          <iframe src="./assets/evan_kiess_resume.pdf#view=FitV&toolbar=0" frameborder="0"></iframe>
-          <!-- <iframe src="./assets/evan_kiess_resume.pdf#zoom=page-fit&view=FitV" frameborder="0"></iframe>
-        </div>
+        <article class="tiny-tuner" data-page="tinytuner">
+          <header>
+            <h2 class="h2 article-title">TinyTuner</h2>
+          </header>
 
-      </article>
+          <section class="project-body"></section>
+        </article>
 
+        <article class="puzzlecube" data-page="puzzlecube">
+          <header>
+            <h2 class="h2 article-title">PuzzleCube</h2>
+          </header>
 
+          <section class="project-body"></section>
+        </article>
 
-
-
-      <!--
+        <!--
         - #PORTFOLIO
       -->
 
-      <!-- <article class="portfolio" data-page="portfolio">
+        <!-- <article class="portfolio" data-page="portfolio">
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
@@ -866,15 +893,11 @@
 
       </article> -->
 
-
-
-
-
-      <!--
+        <!--
         - #BLOG
       -->
 
-      <!-- <article class="blog" data-page="blog">
+        <!-- <article class="blog" data-page="blog">
 
         <header>
           <h2 class="h2 article-title">Blog</h2>
@@ -1058,14 +1081,10 @@
 
       </article> -->
 
-
-
-
-
-      <!--
+        <!--
         - #CONTACT
       -->
-<!-- 
+        <!-- 
       <article class="contact" data-page="contact">
 
         <header>
@@ -1104,27 +1123,24 @@
         </section>
 
       </article> -->
+      </div>
+    </main>
 
-    </div>
-
-  </main>
-
-
-
-
-
-
-  <!--
+    <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 
-  <!--
+    <!--
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
