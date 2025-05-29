@@ -138,11 +138,16 @@ const pages = document.querySelectorAll('[data-page]');
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener('click', function() {
+    let sectionId = this.innerHTML.toLowerCase();
+    history.pushState({section: sectionId}, '', `#${sectionId}`);
+
     for (let i = 0; i < pages.length; i++) {
       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
         pages[i].classList.add('active');
         navigationLinks[i].classList.add('active');
         window.scrollTo(0, 0);
+
+        // add event to browser history
       } else {
         pages[i].classList.remove('active');
         navigationLinks[i].classList.remove('active');
@@ -162,6 +167,9 @@ for (let i = 0; i < projectLinks.length; i++) {
   projectLinks[i].addEventListener('click', function() {
     for (let j = 0; j < pages.length; j++) {
       if (this.classList.contains(pages[j].dataset.page)) {
+        let sectionId = pages[j].dataset.page;
+        history.pushState({section: sectionId}, '', `#${sectionId}`);
+
         pages[j].classList.add('active');
         // projectLinks[i].classList.add('active');
         window.scrollTo(0, 0);
@@ -185,3 +193,30 @@ for (let i = 0; i < projectLinks.length; i++) {
 
   // update nav bar links
 }
+
+
+// handle user history
+window.addEventListener('popstate', (event) => {
+  const state = event.state;
+
+  if (state && state.section) {
+    for (let j = 0; j < pages.length; j++) {
+      if (state.section === pages[j].dataset.page) {
+        pages[j].classList.add('active');
+        // projectLinks[i].classList.add('active');
+        window.scrollTo(0, 0);
+      } else {
+        pages[j].classList.remove('active');
+        // projectLinks[i].classList.remove('active');
+      }
+    }
+    for (let k = 0; k < navigationLinks.length; k++) {
+      let link = navigationLinks[k];
+      if (state.section === link.innerHTML.toLowerCase()) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    }
+  }
+});
