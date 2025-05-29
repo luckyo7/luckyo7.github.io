@@ -160,33 +160,28 @@ for (let i = 0; i < navigationLinks.length; i++) {
 /*
 Project Buttons
 */
-// TODO: add project buttons
 const projectLinks = document.querySelectorAll('[project-img]');
 // const pages = document.querySelectorAll('[data-page]');
 for (let i = 0; i < projectLinks.length; i++) {
   projectLinks[i].addEventListener('click', function() {
-    for (let j = 0; j < pages.length; j++) {
-      if (this.classList.contains(pages[j].dataset.page)) {
-        let sectionId = pages[j].dataset.page;
-        history.pushState({section: sectionId}, '', `#${sectionId}`);
-
-        pages[j].classList.add('active');
-        // projectLinks[i].classList.add('active');
-        window.scrollTo(0, 0);
-      } else {
-        pages[j].classList.remove('active');
-        // projectLinks[i].classList.remove('active');
-      }
-    }
+    // for (let j = 0; j < pages.length; j++) {
+    //   if (this.classList.contains(pages[j].dataset.page)) {
+    //     pages[j].classList.add('active');
+    //     // projectLinks[i].classList.add('active');
+    //     window.scrollTo(0, 0);
+    //   } else {
+    //     pages[j].classList.remove('active');
+    //     // projectLinks[i].classList.remove('active');
+    //   }
+    // }
+    let sectionId = 'about';  // always go back to about
+    history.pushState({section: sectionId}, '', `#${sectionId}`);
     for (let k = 0; k < navigationLinks.length; k++) {
       let link = navigationLinks[k];
-      // if (!link.innerHTML) {
-      //   continue;
-      // }
       if (this.classList.contains(link.innerHTML.toLowerCase())) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
+        let sectionId = link.innerHTML.toLocaleLowerCase();
+
+        showSection(sectionId, pages, navigationLinks);
       }
     }
   });
@@ -194,29 +189,48 @@ for (let i = 0; i < projectLinks.length; i++) {
   // update nav bar links
 }
 
+function showSection(state, pages, navigationLinks) {
+  for (let j = 0; j < pages.length; j++) {
+    if (state === pages[j].dataset.page) {
+      pages[j].classList.add('active');
+      // projectLinks[i].classList.add('active');
+      window.scrollTo(0, 0);
+    } else {
+      pages[j].classList.remove('active');
+      // projectLinks[i].classList.remove('active');
+    }
+  }
+  for (let k = 0; k < navigationLinks.length; k++) {
+    let link = navigationLinks[k];
+    if (state === link.innerHTML.toLowerCase()) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  }
+}
 
 // handle user history
 window.addEventListener('popstate', (event) => {
   const state = event.state;
 
   if (state && state.section) {
-    for (let j = 0; j < pages.length; j++) {
-      if (state.section === pages[j].dataset.page) {
-        pages[j].classList.add('active');
-        // projectLinks[i].classList.add('active');
-        window.scrollTo(0, 0);
-      } else {
-        pages[j].classList.remove('active');
-        // projectLinks[i].classList.remove('active');
-      }
-    }
-    for (let k = 0; k < navigationLinks.length; k++) {
-      let link = navigationLinks[k];
-      if (state.section === link.innerHTML.toLowerCase()) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    }
+    showSection(state.section, pages, navigationLinks);
+  } else {
+    // showSection('about', pages, navigationLinks);
+  }
+});
+
+window.addEventListener('load', () => {
+  const hash = window.location.hash.substring(1);  // Remove '#'
+  if (hash && document.getElementById(hash)) {
+    showSection(hash, pages, navigationLinks);
+    // Also replace state so popstate works properly
+    history.replaceState({section: hash}, '', `#${hash}`);
+  } else {
+    // Show default section
+    showSection(
+        'about', pages,
+        navigationLinks);  // change 'home' to your default section ID
   }
 });
