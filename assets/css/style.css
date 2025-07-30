@@ -1151,6 +1151,10 @@ main {
   color: var(--vegas-gold);
 }
 
+.about-text b {
+  color: var(--vegas-gold);
+}
+
 .project-split .project-split-text {
   width: 50%;
   padding-left: 2%;

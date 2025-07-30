@@ -138,11 +138,12 @@ const pages = document.querySelectorAll('[data-page]');
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener('click', function() {
-    let sectionId = this.innerHTML.toLowerCase();
+    let sectionId = this.classList[1].toLowerCase();
+    console.log(sectionId);
     history.pushState({section: sectionId}, '', `#${sectionId}`);
 
     for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+      if (sectionId === pages[i].dataset.page) {
         pages[i].classList.add('active');
         navigationLinks[i].classList.add('active');
         window.scrollTo(0, 0);
@@ -174,19 +175,47 @@ for (let i = 0; i < projectLinks.length; i++) {
     //     // projectLinks[i].classList.remove('active');
     //   }
     // }
-    let sectionId = 'about';  // always go back to about
-    history.pushState({section: sectionId}, '', `#${sectionId}`);
-    for (let k = 0; k < navigationLinks.length; k++) {
-      let link = navigationLinks[k];
-      if (this.classList.contains(link.innerHTML.toLowerCase())) {
-        let sectionId = link.innerHTML.toLocaleLowerCase();
 
-        showSection(sectionId, pages, navigationLinks);
-      }
-    }
+    let sectionId = this.classList[1].toLowerCase();
+    // let sectionId = 'about';
+    showSectionById(sectionId);
+
+    // history.pushState({section: sectionId}, '', `#${sectionId}`);
+
+    // for (let k = 0; k < navigationLinks.length; k++) {
+    //   let link = navigationLinks[k];
+    //   if (this.classList.contains(link.innerHTML.toLowerCase())) {
+    //     let sectionId = link.innerHTML.toLocaleLowerCase();
+
+    //     showSection(sectionId, pages, navigationLinks);
+    //   }
+    // }
   });
 
   // update nav bar links
+}
+
+function showSectionById(sectionId) {
+  // Find the page with the matching dataset.page
+  for (let j = 0; j < pages.length; j++) {
+    if (sectionId === pages[j].dataset.page) {
+      pages[j].classList.add('active');
+      // projectLinks[i].classList.add('active');
+      window.scrollTo(0, 0);
+    } else {
+      pages[j].classList.remove('active');
+      // projectLinks[i].classList.remove('active');
+    }
+  }
+  // Update the navigation links
+  for (let k = 0; k < navigationLinks.length; k++) {
+    let link = navigationLinks[k];
+    if (sectionId === link.classList[1].toLowerCase()) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  }
 }
 
 function showSection(state, pages, navigationLinks) {
@@ -202,7 +231,7 @@ function showSection(state, pages, navigationLinks) {
   }
   for (let k = 0; k < navigationLinks.length; k++) {
     let link = navigationLinks[k];
-    if (state === link.innerHTML.toLowerCase()) {
+    if (state === link.innerHTML.replace(/\s+/g, '').toLowerCase()) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');

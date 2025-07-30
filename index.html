@@ -190,19 +190,31 @@
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>About</button>
+              <button class="navbar-link about active" data-nav-link>
+                About
+              </button>
             </li>
 
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Resume</button>
+              <button class="navbar-link resume" data-nav-link>Resume</button>
             </li>
 
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>TinyTuner</button>
+              <button class="navbar-link tinytuner" data-nav-link>
+                Tiny Tuner
+              </button>
             </li>
 
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>PuzzleCube</button>
+              <button class="navbar-link puzzlecube" data-nav-link>
+                PuzzleCube
+              </button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link macdock" data-nav-link>
+                Mac Dock
+              </button>
             </li>
             <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
@@ -229,10 +241,20 @@
 
           <section class="about-text">
             <p>
-              My name is Evan Kiess, and I am a junior studying biomedical
-              engineering at the joint department of BME at UNC and NC State. My
-              interests include microcontrollers, embedded systems, and
-              mechanical design.
+              Welcome to my portfolio. I am Evan Kiess, a third year student
+              study biomedical engineering at UNC and NC State. I am a
+              passionate designer, maker, and tinkerer. My hobbies include
+              sailing, playing guitar, and woodworking.
+            </p>
+
+            <p>
+              My technical interests include embedded systems, mechanical
+              design, control systems, and <b>biomedical device design</b>.
+            </p>
+            <p>
+              If you have any suggestions or feedback on my portfolio, or would
+              otherwise like to get in touch, please feel free to reach out via
+              the various contact methods listed in the sidebar.
             </p>
           </section>
 
@@ -294,6 +316,33 @@
                   </p>
                 </a>
               </li>
+
+              <!-- Macbook dock -->
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="design"
+              >
+                <a href="#">
+                  <figure class="project-img macdock" project-img>
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/dock_and_laptop.png"
+                      alt="dock with laptop"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Macbook Air Dock</h3>
+
+                  <p class="project-category">
+                    Sleek, warm dock inspired by minimalist design.
+                  </p>
+                </a>
+              </li>
             </ul>
           </section>
         </article>
@@ -328,7 +377,7 @@
 
         <!-- TINY TUNER -->
         <article class="tiny-tuner" data-page="tinytuner">
-          <h2 class="h2 article-title">TinyTuner</h2>
+          <h2 class="h2 article-title">Tiny Tuner</h2>
 
           <section class="project-body">
             <!-- <figure class="project-split-img"> -->
@@ -342,7 +391,7 @@
             <!-- <section class="project-split-text"> -->
             <h3 class="h3 project-heading">About</h3>
             <p class="project-text">
-              TinyTuner is a compact guitar tuner built using an
+              Tiny Tuner is a compact guitar tuner built using an
               <b>ESP32 microcontroller</b>, a <b>MEMS microphone</b>, and an
               <b>OLED display</b>. Pitch detection is implemented in the
               <b>Arduino</b> framework using the <b>YIN</b> algorithm and a Fast
@@ -496,9 +545,43 @@
             <!-- </section> -->
           </section>
         </article>
+
+        <!-- MACBOOK DOCK -->
+
+        <article class="macdock" data-page="macdock">
+          <header>
+            <h2 class="h2 article-title">Mac Dock</h2>
+          </header>
+
+          <section class="project-body">
+            <!-- <section class="project-split"> -->
+            <!-- <figure class="project-split-img"> -->
+            <img
+              src="./assets/images/dock_no_laptop.png"
+              alt="dock with laptop"
+              loading="lazy"
+              class="project-img float-left"
+              style="float: left"
+            />
+            <!-- <section class="project-split-text"> -->
+            <h3 class="h3 project-heading">About</h3>
+
+            <p>
+              A sleek design inspired by optimizing my workspace and minimalist
+              design. The dock was designed to hold an M2 Macbook Air and
+              features clean cable management. The design was created in
+              <b>Fusion 360</b> and manufactured using several woodworking
+              techniques.
+            </p>
+            <p>
+              I quickly learned the importance of designing for
+              <b>manufacturability</b> and discovered the challenges of
+              balancing creative vision with real-world constraints.
+            </p>
+          </section>
+        </article>
       </div>
     </main>
-
     <!--
     - custom js link
   -->
