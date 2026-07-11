@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#141414;font-family:'IBM Plex Mono',ui-monospace,monospace;--acc:#e0a04a}
+  a{color:inherit}
+  .pj:hover .pj-num{color:var(--acc)}
+  .pj-frame{transition:border-color .25s}
+  .pj:hover .pj-frame{border-color:var(--acc)}
+  .pj-ov{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity .28s ease;background:rgba(10,11,12,.5);box-shadow:inset 0 0 0 1.5px var(--acc)}
+  .pj:hover .pj-ov{opacity:1}
+  .pj-ov .br{position:absolute;width:18px;height:18px;border:1.5px solid var(--acc);transition:transform .28s ease}
+  .pj-ov .tl{top:10px;left:10px;border-right:0;border-bottom:0;transform:translate(4px,4px)}
+  .pj-ov .tr{top:10px;right:10px;border-left:0;border-bottom:0;transform:translate(-4px,4px)}
+  .pj-ov .bl{bottom:10px;left:10px;border-right:0;border-top:0;transform:translate(4px,-4px)}
+  .pj-ov .brr{bottom:10px;right:10px;border-left:0;border-top:0;transform:translate(-4px,-4px)}
+  .pj:hover .pj-ov .br{transform:translate(0,0)}
+  .pj-ov .tag{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:10px;letter-spacing:.2em;color:#fff}
+  .pj:hover .pj-go{opacity:1;transform:translateX(0)}
+  .nl:hover{color:var(--acc)!important}
+</style>
+</helmet>
+
+<div style="min-height:100vh;padding:28px;box-sizing:border-box;display:flex;justify-content:center">
+
+  <!-- floating contact (edge pill) -->
+  <div style="position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:60;background:#131416;border:1px solid rgba(255,255,255,.2);border-right:none;border-radius:11px 0 0 11px;padding:16px 11px;display:flex;flex-direction:column;align-items:center;gap:15px;box-shadow:-10px 0 30px rgba(0,0,0,.45)">
+    <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:8.5px;letter-spacing:.2em;color:#5a5d61">CONTACT&nbsp;/&nbsp;01</div>
+    <div style="width:16px;height:1px;background:rgba(255,255,255,.16)"></div>
+    <a class="nl" href="mailto:ekiess@unc.edu" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">EMAIL</a>
+    <a class="nl" href="https://github.com/luckyo7" target="_blank" rel="noopener" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">GITHUB</a>
+    <a class="nl" href="https://www.linkedin.com/in/evan-kiess/" target="_blank" rel="noopener" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">LINKEDIN</a>
+    <div style="width:7px;height:7px;border:1px solid var(--acc);transform:rotate(45deg)"></div>
+  </div>
+
+  <div style="width:100%;max-width:1240px;background:#0b0c0d;color:#e8e9ea;border:1px solid rgba(255,255,255,.13);position:relative;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:26px 26px;background-position:-1px -1px">
+
+    <div style="position:absolute;top:14px;left:14px;width:11px;height:11px;background:radial-gradient(circle,transparent 3px,rgba(255,255,255,.4) 3px,rgba(255,255,255,.4) 4px,transparent 4px),linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/1px 100% no-repeat,linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/100% 1px no-repeat"></div>
+    <div style="position:absolute;top:14px;right:14px;width:11px;height:11px;background:radial-gradient(circle,transparent 3px,rgba(255,255,255,.4) 3px,rgba(255,255,255,.4) 4px,transparent 4px),linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/1px 100% no-repeat,linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/100% 1px no-repeat"></div>
+
+    <!-- top nav -->
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 34px;border-bottom:1px solid rgba(255,255,255,.13);font-size:10.5px;letter-spacing:.14em;color:#83868a">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <a href="index.html" style="color:#e8e9ea;font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:.06em;text-decoration:none">EDK</a>
+        <span>PORTFOLIO / REV 2026.1</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:18px">
+        <a class="nl" href="index.html" style="text-decoration:none;color:#e8e9ea">INDEX</a>
+        <a class="nl" href="resume.pdf" style="text-decoration:none;color:#83868a">RESUME&nbsp;↗</a>
+        <a class="nl" href="resources.html" style="text-decoration:none;color:#83868a">RESOURCES</a>
+        <span style="width:1px;height:14px;background:rgba(255,255,255,.22)"></span>
+        <div style="display:flex;gap:18px;font-size:10.5px;letter-spacing:.14em;white-space:nowrap">
+          <a class="nl" href="detail.html?p=mousevr" style="text-decoration:none;color:#a9abae">MouseVR</a>
+          <a class="nl" href="detail.html?p=robotic-putter" style="text-decoration:none;color:#a9abae">Robotic Putter</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div style="min-width:0">
+      <!-- hero -->
+      <div id="about" style="padding:46px 40px 40px;border-bottom:1px solid rgba(255,255,255,.13);position:relative;scroll-margin-top:70px">
+        <div style="display:flex;align-items:center;gap:8px;color:#6f7276;font-size:10px;letter-spacing:.12em;margin-bottom:22px">
+          <span>├</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,#4a4d50 0 6px,transparent 6px 10px)"></div><span>FOURTH-YEAR · BIOMEDICAL ENGINEERING</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,#4a4d50 0 6px,transparent 6px 10px)"></div><span>┤</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:32px">
+          <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:92px;line-height:.92;letter-spacing:-.02em;margin:0;color:#f4f4f5">EVAN<br>KIESS</h1>
+          <div style="flex:none">
+            <div style="position:relative;width:140px;aspect-ratio:4/5;border:1px solid rgba(255,255,255,.18);background:#0e0f11">
+              <span style="position:absolute;width:9px;height:9px;border:1px solid var(--acc);top:-1px;left:-1px;border-right:0;border-bottom:0"></span>
+              <span style="position:absolute;width:9px;height:9px;border:1px solid var(--acc);top:-1px;right:-1px;border-left:0;border-bottom:0"></span>
+              <span style="position:absolute;width:9px;height:9px;border:1px solid var(--acc);bottom:-1px;left:-1px;border-right:0;border-top:0"></span>
+              <span style="position:absolute;width:9px;height:9px;border:1px solid var(--acc);bottom:-1px;right:-1px;border-left:0;border-top:0"></span>
+              <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="headshot" shape="rect" fit="cover" placeholder="headshot" hint-size="100%,100%"></x-import>
+            </div>
+            <div style="width:140px;font-size:9px;letter-spacing:.16em;color:#6f7276;margin-top:8px;display:flex;justify-content:space-between"><span>FIG. 01</span><span>E. KIESS</span></div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:26px;gap:40px">
+          <p style="max-width:520px;margin:0;font-size:13px;line-height:1.85;color:#a9abae">Designer, maker, and tinkerer studying biomedical engineering at <span style="color:#e8e9ea">UNC</span> &amp; <span style="color:#e8e9ea">NC&nbsp;State</span>. Working across embedded systems, mechanical design, control systems, and surgical robotics. Off the bench: sailing, guitar, and woodworking.</p>
+          <div style="text-align:right;font-size:10px;letter-spacing:.1em;color:#6f7276;line-height:2">
+            <div>LAT 35.9132° N</div><div>LON 79.0558° W</div><div style="color:#a9abae">CHAPEL HILL, NC</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- projects header -->
+      <div id="work" style="display:flex;justify-content:space-between;align-items:baseline;padding:22px 40px 16px;font-size:10.5px;letter-spacing:.14em;color:#83868a;scroll-margin-top:70px">
+        <span style="color:#e8e9ea">SELECTED WORK</span><span>08 ITEMS</span>
+      </div>
+
+      <!-- projects grid -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid rgba(255,255,255,.13)">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="8">
+          <a href="{{ p.href }}" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+              <span class="pj-num" style="transition:color .2s">P-{{ p.n }}</span>
+              <span style="display:flex;align-items:center;gap:6px"><sc-if value="{{ p.ongoing }}" hint-placeholder-val="{{ false }}"><span style="width:5px;height:5px;background:var(--acc);border-radius:50%"></span></sc-if>{{ p.cat }}</span>
+            </div>
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+              <div class="pj-img" style="position:absolute;inset:0">
+                <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{ p.slotA }}" shape="rect" fit="{{ p.fit }}" placeholder="{{ p.ph }}" hint-size="100%,100%"></x-import>
+              </div>
+              <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG {{ p.n }}</div>
+            </div>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">{{ p.title }}</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">{{ p.desc }}</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+              <span>{{ p.tools }}</span>
+              <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+
+      <!-- footer -->
+      <div style="border-top:1px solid rgba(255,255,255,.13);overflow:hidden">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 40px;font-size:11px;letter-spacing:.08em;color:#83868a">
+          <span style="color:#e8e9ea">© 2026 EVAN KIESS</span>
+          <div style="display:flex;gap:24px">
+            <a class="nl" href="mailto:ekiess@unc.edu" style="text-decoration:none;color:#83868a">EMAIL</a>
+            <a class="nl" href="https://github.com/luckyo7" target="_blank" rel="noopener" style="text-decoration:none;color:#83868a">GITHUB</a>
+            <a class="nl" href="https://www.linkedin.com/in/evan-kiess/" target="_blank" rel="noopener" style="text-decoration:none;color:#83868a">LINKEDIN</a>
+          </div>
+          <a href="#" style="text-decoration:none;color:var(--acc)">BACK TO TOP&nbsp;↑</a>
+        </div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:150px;line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.14);padding:0 0 0 34px;margin:4px 0 -26px;white-space:nowrap;pointer-events:none">EVAN KIESS<span style="-webkit-text-stroke:1px var(--acc)">.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const projects = [
+      { n: '01', slug: 'mousevr', title: 'MouseVR', cat: 'ONGOING · RESEARCH', desc: 'In the workshop now — a full writeup is on the way.', tools: 'IN PROGRESS', slotA: 'a-mousevr', ph: 'mousevr photo', ongoing: true },
+      { n: '02', slug: 'robotic-putter', title: 'Robotic Putter', cat: 'ONGOING · ROBOTICS', desc: 'In the workshop now — a full writeup is on the way.', tools: 'IN PROGRESS', slotA: 'a-robputter', ph: 'robotic putter photo', ongoing: true },
+      { n: '03', slug: 'press', title: 'Modular Vertical Press', cat: 'MECHANICAL', desc: 'A modular benchtop press for heat-set threaded inserts, built entirely from leftover project materials.', tools: 'FUSION 360 · FDM', slotA: 'a05', ph: 'press photo' },
+      { n: '04', slug: 'tiny-tuner', title: 'Tiny Tuner', cat: 'EMBEDDED', desc: 'A compact guitar tuner built with an ESP32, MEMS microphone, and OLED display.', tools: 'ESP32 · MEMS · OLED', slotA: 'a01', ph: 'tiny tuner photo' },
+      { n: '05', slug: 'basketbot', title: 'BasketBot', cat: 'ROBOTICS', desc: 'A basketball-shooting robot built with Arduino and computer vision.', tools: 'ARDUINO · OPENCV', slotA: 'a02', ph: 'basketbot photo' },
+      { n: '06', slug: 'telecaster', title: '\u201972 Telecaster Deluxe', cat: 'FABRICATION', desc: 'A from-scratch electric guitar inspired by the 1972 Fender Telecaster Deluxe.', tools: 'ROUTER · HANDTOOLS · FDM', slotA: 'a03', ph: 'telecaster photo' },
+      { n: '07', slug: 'guitar-stand', title: 'Guitar Stand', cat: 'FABRICATION', desc: 'A laser-cut poplar plywood stand in dark walnut, built to hold acoustic and electric guitars.', tools: 'LASER · PLYWOOD', slotA: 'a04', ph: 'guitar stand photo' },
+      { n: '08', slug: 'mac-dock', title: 'MacBook Air Dock', cat: 'DESIGN', desc: 'A sleek hardwood dock for the M2 MacBook Air with clean cable management.', tools: 'ROUTER · HANDTOOLS · PLYWOOD', slotA: 'a06', ph: 'dock photo' },
+    ];
+    // Per-project photo framing. 'contain' shows the whole photo, letterboxed
+    // against the frame's dark background (no cropping, rows stay uniform);
+    // 'cover' fills the frame edge-to-edge, cropping overflow. Frame is a fixed
+    // 4/3 either way, so the grid stays neat regardless of photo dimensions.
+    // Override any project here, e.g. fit['basketbot'] = 'cover'.
+    const fit = {};
+    projects.forEach(p => { p.href = 'detail.html?p=' + p.slug; p.fit = fit[p.slug] || 'contain'; });
+    return { projects };
+  }
+}
+</script>
+</body>
+</html>

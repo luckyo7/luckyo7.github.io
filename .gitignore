@@ -1,0 +1,9 @@
+# Local Claude Code settings / project notes (machine-specific, not published)
+.claude/
+CLAUDE.md
+
+# Scratch drawings / working files — not part of the published site
+uploads/
+
+# OS cruft
+.DS_Store
