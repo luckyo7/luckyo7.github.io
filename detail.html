@@ -86,7 +86,7 @@
       <div style="padding:40px 40px 0">
         <div style="position:relative;aspect-ratio:16/9;border:1px solid rgba(255,255,255,.15);background:#0e0f11;overflow:hidden">
           <div style="position:absolute;inset:0">
-            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{ heroSlot }}" shape="rect" placeholder="{{ heroPh }}" hint-size="100%,100%"></x-import>
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{ heroSlot }}" shape="rect" fit="contain" placeholder="{{ heroPh }}" hint-size="100%,100%"></x-import>
           </div>
           <div style="position:absolute;bottom:8px;left:8px;font-size:9px;letter-spacing:.1em;color:#8b8e92;background:rgba(11,12,13,.75);padding:3px 7px">FIG 01 — {{ p.title }}</div>
         </div>
@@ -111,7 +111,7 @@
               <div>
                 <div style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);background:#0e0f11;overflow:hidden">
                   <div style="position:absolute;inset:0">
-                    <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{ f.slot }}" shape="rect" placeholder="{{ f.title }}" hint-size="100%,100%"></x-import>
+                    <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{ f.slot }}" shape="rect" fit="contain" placeholder="{{ f.title }}" hint-size="100%,100%"></x-import>
                   </div>
                   <div style="position:absolute;bottom:8px;left:8px;font-size:9px;letter-spacing:.1em;color:#8b8e92;background:rgba(11,12,13,.75);padding:3px 7px">FIG {{ f.fig }}</div>
                 </div>
