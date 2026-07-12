@@ -1,41 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet data-dc-atomics>
+<title>Resources — Evan Kiess</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  body{margin:0;background:#141414;font-family:'IBM Plex Mono',ui-monospace,monospace;--acc:#e0a04a}
-  a{color:inherit}
-  .nl:hover{color:var(--acc)!important}
-  .rrow:hover{background:rgba(255,255,255,.035)}
-  .rrow:hover .rr-bar{transform:scaleY(1)!important}
-  .rrow:hover .rr-arrow{opacity:1!important;transform:translateX(0)!important}
-  .rrow:hover .rr-name{color:var(--acc)!important;text-decoration-color:var(--acc)!important}
-  @media(max-width:760px){
-    body{overflow-x:hidden}
-    .page{padding:10px!important}
-    .contact-pill{display:none!important}
-    .topnav{flex-direction:column!important;align-items:flex-start!important;gap:10px!important}
-    .topnav-right{flex-wrap:wrap!important;gap:8px 14px!important}
-    .mpad{padding-left:16px!important;padding-right:16px!important}
-    .res-title{font-size:40px!important}
-    .rrow{grid-template-columns:1fr!important;gap:6px!important;padding-left:16px!important;padding-right:16px!important}
-    .rr-arrow{display:none!important}
-    .footer-row{flex-wrap:wrap!important;gap:10px 16px!important;justify-content:flex-start!important}
-    .wordmark{font-size:60px!important}
-  }
-</style>
-</helmet>
-
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <div class="page" style="min-height:100vh;padding:28px;box-sizing:border-box;display:flex;justify-content:center">
+
+  <!-- floating contact tab (right edge) -->
+  <div class="contact-pill" style="position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:60;background:#131416;border:1px solid rgba(255,255,255,.2);border-right:none;border-radius:11px 0 0 11px;padding:16px 11px;display:flex;flex-direction:column;align-items:center;gap:15px;box-shadow:-10px 0 30px rgba(0,0,0,.45)">
+    <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:8.5px;letter-spacing:.2em;color:#5a5d61">CONTACT&nbsp;/&nbsp;01</div>
+    <div style="width:16px;height:1px;background:rgba(255,255,255,.16)"></div>
+    <a class="nl" href="mailto:ekiess@unc.edu" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">EMAIL</a>
+    <a class="nl" href="https://github.com/luckyo7" target="_blank" rel="noopener" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">GITHUB</a>
+    <a class="nl" href="https://www.linkedin.com/in/evan-kiess/" target="_blank" rel="noopener" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">LINKEDIN</a>
+    <div style="width:7px;height:7px;border:1px solid var(--acc);transform:rotate(45deg)"></div>
+  </div>
+
   <div style="width:100%;max-width:1240px;background:#0b0c0d;color:#e8e9ea;border:1px solid rgba(255,255,255,.13);position:relative;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:26px 26px;background-position:-1px -1px">
 
     <div style="position:absolute;top:14px;left:14px;width:11px;height:11px;background:radial-gradient(circle,transparent 3px,rgba(255,255,255,.4) 3px,rgba(255,255,255,.4) 4px,transparent 4px),linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/1px 100% no-repeat,linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/100% 1px no-repeat"></div>
@@ -53,92 +39,106 @@
         <a class="nl" href="resources.html" style="text-decoration:none;color:#e8e9ea">RESOURCES</a>
         <span style="width:1px;height:14px;background:rgba(255,255,255,.22)"></span>
         <div style="display:flex;gap:18px;font-size:10.5px;letter-spacing:.14em;white-space:nowrap">
-          <a class="nl" href="detail.html?p=mousevr" style="text-decoration:none;color:#a9abae">MouseVR</a>
-          <a class="nl" href="detail.html?p=robotic-putter" style="text-decoration:none;color:#a9abae">Robotic Putter</a>
+          <a class="nl" href="mousevr.html" style="text-decoration:none;color:#a9abae">MouseVR</a>
+          <a class="nl" href="robotic-putter.html" style="text-decoration:none;color:#a9abae">Robotic Putter</a>
         </div>
       </div>
     </div>
 
-    <div style="display:flex">
-      <!-- floating contact (edge pill) -->
-      <div class="contact-pill" style="position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:60;background:#131416;border:1px solid rgba(255,255,255,.2);border-right:none;border-radius:11px 0 0 11px;padding:16px 11px;display:flex;flex-direction:column;align-items:center;gap:15px;box-shadow:-10px 0 30px rgba(0,0,0,.45)">
-        <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:8.5px;letter-spacing:.2em;color:#5a5d61">CONTACT&nbsp;/&nbsp;01</div>
-        <div style="width:16px;height:1px;background:rgba(255,255,255,.16)"></div>
-        <a class="nl" href="mailto:ekiess@unc.edu" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">EMAIL</a>
-        <a class="nl" href="https://github.com/luckyo7" target="_blank" rel="noopener" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">GITHUB</a>
-        <a class="nl" href="https://www.linkedin.com/in/evan-kiess/" target="_blank" rel="noopener" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">LINKEDIN</a>
-        <div style="width:7px;height:7px;border:1px solid var(--acc);transform:rotate(45deg)"></div>
+    <!-- main -->
+    <div style="min-width:0">
+      <!-- header -->
+      <div class="mpad" style="padding:44px 40px 34px;border-bottom:1px solid rgba(255,255,255,.13)">
+        <div style="display:flex;align-items:center;gap:8px;color:#6f7276;font-size:10px;letter-spacing:.12em;margin-bottom:22px">
+          <span>├</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,#4a4d50 0 6px,transparent 6px 10px)"></div><span>REFERENCE LIBRARY — 007</span>
+        </div>
+        <h1 class="res-title" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:60px;line-height:.96;letter-spacing:-.02em;margin:0;color:#f4f4f5">Resources</h1>
+        <p style="max-width:640px;margin:22px 0 0;font-size:13.5px;line-height:1.8;color:#a9abae">A running collection of tools, references, and books I have found genuinely useful as a student and maker. I hope you find them as useful as I have. If you have any suggestions for resources, I would love to hear from you!</p>
       </div>
 
-      <!-- main -->
-      <div style="flex:1;min-width:0">
-        <!-- header -->
-        <div class="mpad" style="padding:44px 40px 34px;border-bottom:1px solid rgba(255,255,255,.13)">
-          <div style="display:flex;align-items:center;gap:8px;color:#6f7276;font-size:10px;letter-spacing:.12em;margin-bottom:22px">
-            <span>├</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,#4a4d50 0 6px,transparent 6px 10px)"></div><span>REFERENCE LIBRARY — 007</span>
-          </div>
-          <h1 class="res-title" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:60px;line-height:.96;letter-spacing:-.02em;margin:0;color:#f4f4f5">Resources</h1>
-          <p style="max-width:640px;margin:22px 0 0;font-size:13.5px;line-height:1.8;color:#a9abae">A running collection of tools, references, and books I have found genuinely useful as a student and maker. I hope you find them as useful as I have. If you have any suggestions for resources, I would love to hear from you!</p>
-        </div>
-
-        <!-- sections -->
-        <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="4">
+      <!-- sections -->
           <div>
             <div class="mpad" style="display:flex;justify-content:space-between;align-items:baseline;padding:20px 40px 12px;font-size:10px;letter-spacing:.14em;color:#83868a;background:#0e0f11;border-bottom:1px solid rgba(255,255,255,.1)">
-              <span style="color:#e8e9ea">{{ sec.code }} · {{ sec.title }}</span><span>{{ sec.count }}</span>
+              <span style="color:#e8e9ea">R-01 · TOOLS &amp; REFERENCES</span><span>04 ITEMS</span>
             </div>
-            <sc-for list="{{ sec.items }}" as="it" hint-placeholder-count="4">
-              <a class="rrow" href="{{ it.url }}" target="_blank" rel="noopener" style="display:grid;grid-template-columns:300px 1fr 30px;align-items:flex-start;gap:24px;padding:16px 40px;min-height:56px;box-sizing:border-box;border-bottom:1px solid rgba(255,255,255,.08);text-decoration:none;color:inherit;position:relative;transition:background .18s">
-                <div class="rr-bar" style="position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc);transform:scaleY(0);transition:transform .2s"></div>
-                <span class="rr-name" style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;line-height:1.35;color:#f0f0f1;transition:color .2s,text-decoration-color .2s;text-decoration:underline;text-decoration-color:rgba(224,160,74,.5);text-underline-offset:4px;text-decoration-thickness:1px">{{ it.name }}</span>
-                <div style="display:flex;flex-direction:column;gap:5px">
-                  <sc-if value="{{ it.meta }}" hint-placeholder-val="{{ false }}"><span style="font-size:9.5px;letter-spacing:.06em;color:#6f7276">{{ it.meta }}</span></sc-if>
-                  <span style="font-size:11.5px;line-height:1.6;color:#8b8e92">{{ it.note }}</span>
-                </div>
-                <span class="rr-arrow" style="font-size:14px;color:var(--acc);opacity:0;transform:translateX(-4px);transition:all .2s;text-align:right">↗</span>
-              </a>
-            </sc-for>
+            <a class="rrow" href="https://bumpmesh.com/" target="_blank" rel="noopener" style="display:grid;grid-template-columns:300px 1fr 30px;align-items:flex-start;gap:24px;padding:16px 40px;min-height:56px;box-sizing:border-box;border-bottom:1px solid rgba(255,255,255,.08);text-decoration:none;color:inherit;position:relative;transition:background .18s">
+              <div class="rr-bar" style="position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc);transform:scaleY(0);transition:transform .2s"></div>
+              <span class="rr-name" style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;line-height:1.35;color:#f0f0f1;transition:color .2s,text-decoration-color .2s;text-decoration:underline;text-decoration-color:rgba(224,160,74,.5);text-underline-offset:4px;text-decoration-thickness:1px">BumpMesh</span>
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <span style="font-size:11.5px;line-height:1.6;color:#8b8e92">Handy web tool for generating textured and knurled surfaces you can drop straight into a CAD model or 3D print. Essentially an overpowered fuzzy skin tool.</span>
+              </div>
+              <span class="rr-arrow" style="font-size:14px;color:var(--acc);opacity:0;transform:translateX(-4px);transition:all .2s;text-align:right">↗</span>
+            </a>
+            <a class="rrow" href="https://jdsharp.org/library" target="_blank" rel="noopener" style="display:grid;grid-template-columns:300px 1fr 30px;align-items:flex-start;gap:24px;padding:16px 40px;min-height:56px;box-sizing:border-box;border-bottom:1px solid rgba(255,255,255,.08);text-decoration:none;color:inherit;position:relative;transition:background .18s">
+              <div class="rr-bar" style="position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc);transform:scaleY(0);transition:transform .2s"></div>
+              <span class="rr-name" style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;line-height:1.35;color:#f0f0f1;transition:color .2s,text-decoration-color .2s;text-decoration:underline;text-decoration-color:rgba(224,160,74,.5);text-underline-offset:4px;text-decoration-thickness:1px">BME Reference Library</span>
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <span style="font-size:11.5px;line-height:1.6;color:#8b8e92">A broad and detailed encyclopedia of all things biomedical engineering. Written by Joseph Sharp here at UNC, this reference library gives a great overview of the major areas of research in BME.</span>
+              </div>
+              <span class="rr-arrow" style="font-size:14px;color:var(--acc);opacity:0;transform:translateX(-4px);transition:all .2s;text-align:right">↗</span>
+            </a>
+            <a class="rrow" href="https://www.boltscience.com/pages/info.htm" target="_blank" rel="noopener" style="display:grid;grid-template-columns:300px 1fr 30px;align-items:flex-start;gap:24px;padding:16px 40px;min-height:56px;box-sizing:border-box;border-bottom:1px solid rgba(255,255,255,.08);text-decoration:none;color:inherit;position:relative;transition:background .18s">
+              <div class="rr-bar" style="position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc);transform:scaleY(0);transition:transform .2s"></div>
+              <span class="rr-name" style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;line-height:1.35;color:#f0f0f1;transition:color .2s,text-decoration-color .2s;text-decoration:underline;text-decoration-color:rgba(224,160,74,.5);text-underline-offset:4px;text-decoration-thickness:1px">Bolt Science</span>
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <span style="font-size:11.5px;line-height:1.6;color:#8b8e92">I'm not sure I've ever seen a website as dedicated to a specific subject as boltscience.com. Any questions regarding bolted joints has surely been answered at some point on this website in its over 30 years of operation.</span>
+              </div>
+              <span class="rr-arrow" style="font-size:14px;color:var(--acc);opacity:0;transform:translateX(-4px);transition:all .2s;text-align:right">↗</span>
+            </a>
+            <a class="rrow" href="https://lopaka.app/" target="_blank" rel="noopener" style="display:grid;grid-template-columns:300px 1fr 30px;align-items:flex-start;gap:24px;padding:16px 40px;min-height:56px;box-sizing:border-box;border-bottom:1px solid rgba(255,255,255,.08);text-decoration:none;color:inherit;position:relative;transition:background .18s">
+              <div class="rr-bar" style="position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc);transform:scaleY(0);transition:transform .2s"></div>
+              <span class="rr-name" style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;line-height:1.35;color:#f0f0f1;transition:color .2s,text-decoration-color .2s;text-decoration:underline;text-decoration-color:rgba(224,160,74,.5);text-underline-offset:4px;text-decoration-thickness:1px">Lopaka</span>
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <span style="font-size:11.5px;line-height:1.6;color:#8b8e92">Really cool feature-rich and easy-to-use graphics editor for embedded systems projects. No more painstaking code changes and waiting for your microcontroller to flash for the 1000th time in a row to see your edits.</span>
+              </div>
+              <span class="rr-arrow" style="font-size:14px;color:var(--acc);opacity:0;transform:translateX(-4px);transition:all .2s;text-align:right">↗</span>
+            </a>
           </div>
-        </sc-for>
+          <div>
+            <div class="mpad" style="display:flex;justify-content:space-between;align-items:baseline;padding:20px 40px 12px;font-size:10px;letter-spacing:.14em;color:#83868a;background:#0e0f11;border-bottom:1px solid rgba(255,255,255,.1)">
+              <span style="color:#e8e9ea">R-02 · BOOKS</span><span>03 ITEMS</span>
+            </div>
+            <a class="rrow" href="https://www.amazon.com/Exact-Constraint-Machine-Kinematic-Principles/dp/B002FRQ5WS" target="_blank" rel="noopener" style="display:grid;grid-template-columns:300px 1fr 30px;align-items:flex-start;gap:24px;padding:16px 40px;min-height:56px;box-sizing:border-box;border-bottom:1px solid rgba(255,255,255,.08);text-decoration:none;color:inherit;position:relative;transition:background .18s">
+              <div class="rr-bar" style="position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc);transform:scaleY(0);transition:transform .2s"></div>
+              <span class="rr-name" style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;line-height:1.35;color:#f0f0f1;transition:color .2s,text-decoration-color .2s;text-decoration:underline;text-decoration-color:rgba(224,160,74,.5);text-underline-offset:4px;text-decoration-thickness:1px">Exact Constraint: Machine Design Using Kinematic Principles</span>
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <span style="font-size:9.5px;letter-spacing:.06em;color:#6f7276">Douglass L. Blanding · ASME Press, 1999</span><span style="font-size:11.5px;line-height:1.6;color:#8b8e92">If I had one book to recommend, it would be this masterpiece on mechanical design. Exact-constraint design is a brilliantly simple and effective technique that all engineers and makers should be familiar with.</span>
+              </div>
+              <span class="rr-arrow" style="font-size:14px;color:var(--acc);opacity:0;transform:translateX(-4px);transition:all .2s;text-align:right">↗</span>
+            </a>
+            <a class="rrow" href="https://www.amazon.com/Mechanisms-Linkages-Mechanical-Controls-Chironis/dp/0070107750" target="_blank" rel="noopener" style="display:grid;grid-template-columns:300px 1fr 30px;align-items:flex-start;gap:24px;padding:16px 40px;min-height:56px;box-sizing:border-box;border-bottom:1px solid rgba(255,255,255,.08);text-decoration:none;color:inherit;position:relative;transition:background .18s">
+              <div class="rr-bar" style="position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc);transform:scaleY(0);transition:transform .2s"></div>
+              <span class="rr-name" style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;line-height:1.35;color:#f0f0f1;transition:color .2s,text-decoration-color .2s;text-decoration:underline;text-decoration-color:rgba(224,160,74,.5);text-underline-offset:4px;text-decoration-thickness:1px">Mechanisms, Linkages, and Mechanical Controls</span>
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <span style="font-size:9.5px;letter-spacing:.06em;color:#6f7276">Nicholas P. Chironis · McGraw-Hill, 1965</span><span style="font-size:11.5px;line-height:1.6;color:#8b8e92">If you find yourself needing some sort of mechanism, it's probably already in this book waiting to be found. Chironis delivers 354 pages of inspiring mechanisms and designs.</span>
+              </div>
+              <span class="rr-arrow" style="font-size:14px;color:var(--acc);opacity:0;transform:translateX(-4px);transition:all .2s;text-align:right">↗</span>
+            </a>
+            <a class="rrow" href="https://www.amazon.com/Shigleys-Mechanical-Engineering-Richard-Budynas/dp/0073398217" target="_blank" rel="noopener" style="display:grid;grid-template-columns:300px 1fr 30px;align-items:flex-start;gap:24px;padding:16px 40px;min-height:56px;box-sizing:border-box;border-bottom:1px solid rgba(255,255,255,.08);text-decoration:none;color:inherit;position:relative;transition:background .18s">
+              <div class="rr-bar" style="position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc);transform:scaleY(0);transition:transform .2s"></div>
+              <span class="rr-name" style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;line-height:1.35;color:#f0f0f1;transition:color .2s,text-decoration-color .2s;text-decoration:underline;text-decoration-color:rgba(224,160,74,.5);text-underline-offset:4px;text-decoration-thickness:1px">Shigley's Mechanical Engineering Design</span>
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <span style="font-size:9.5px;letter-spacing:.06em;color:#6f7276">Richard G. Budynas &amp; J. Keith Nisbett · McGraw-Hill, 11th ed., 2019</span><span style="font-size:11.5px;line-height:1.6;color:#8b8e92">A classic in mechanical engineering with something to give for readers of all levels.</span>
+              </div>
+              <span class="rr-arrow" style="font-size:14px;color:var(--acc);opacity:0;transform:translateX(-4px);transition:all .2s;text-align:right">↗</span>
+            </a>
+          </div>
 
-        <!-- footer -->
-        <div style="border-top:1px solid rgba(255,255,255,.13);overflow:hidden">
-          <div class="footer-row mpad" style="display:flex;justify-content:space-between;align-items:center;padding:22px 40px;font-size:11px;letter-spacing:.08em;color:#83868a">
-            <span style="color:#e8e9ea">© 2026 EVAN KIESS</span>
-            <div style="display:flex;gap:24px">
-              <a class="nl" href="mailto:ekiess@unc.edu" style="text-decoration:none;color:#83868a">EMAIL</a>
-              <a class="nl" href="https://github.com/luckyo7" target="_blank" rel="noopener" style="text-decoration:none;color:#83868a">GITHUB</a>
-              <a class="nl" href="https://www.linkedin.com/in/evan-kiess/" target="_blank" rel="noopener" style="text-decoration:none;color:#83868a">LINKEDIN</a>
-            </div>
-            <a href="#" style="text-decoration:none;color:var(--acc)">BACK TO TOP&nbsp;↑</a>
+      <!-- footer -->
+      <div style="border-top:1px solid rgba(255,255,255,.13);overflow:hidden">
+        <div class="footer-row mpad" style="display:flex;justify-content:space-between;align-items:center;padding:22px 40px;font-size:11px;letter-spacing:.08em;color:#83868a">
+          <span style="color:#e8e9ea">© 2026 EVAN KIESS</span>
+          <div style="display:flex;gap:24px">
+            <a class="nl" href="mailto:ekiess@unc.edu" style="text-decoration:none;color:#83868a">EMAIL</a>
+            <a class="nl" href="https://github.com/luckyo7" target="_blank" rel="noopener" style="text-decoration:none;color:#83868a">GITHUB</a>
+            <a class="nl" href="https://www.linkedin.com/in/evan-kiess/" target="_blank" rel="noopener" style="text-decoration:none;color:#83868a">LINKEDIN</a>
           </div>
-          <div class="wordmark" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:150px;line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.14);padding:0 0 0 34px;margin:4px 0 -26px;white-space:nowrap;pointer-events:none">EVAN KIESS<span style="-webkit-text-stroke:1px var(--acc)">.</span></div>
+          <a href="#" style="text-decoration:none;color:var(--acc)">BACK TO TOP&nbsp;↑</a>
         </div>
+        <div class="wordmark" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:150px;line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.14);padding:0 0 0 34px;margin:4px 0 -26px;white-space:nowrap;pointer-events:none">EVAN KIESS<span style="-webkit-text-stroke:1px var(--acc)">.</span></div>
       </div>
     </div>
   </div>
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    const sections = [
-      { code: 'R-01', title: 'TOOLS & REFERENCES', items: [
-        { name: 'BumpMesh', note: 'Handy web tool for generating textured and knurled surfaces you can drop straight into a CAD model or 3D print. Essentially an overpowered fuzzy skin tool.', url: 'https://bumpmesh.com/' },
-        { name: 'BME Reference Library', note: 'A broad and detailed encyclopedia of all things biomedical engineering. Written by Joseph Sharp here at UNC, this reference library gives a great overview of the major areas of research in BME.', url: 'https://jdsharp.org/library' },
-        { name: 'Bolt Science', note: "I'm not sure I've ever seen a website as dedicated to a specific subject as boltscience.com. Any questions regarding bolted joints has surely been answered at some point on this website in its over 30 years of operation.", url: 'https://www.boltscience.com/pages/info.htm' },
-        { name: 'Lopaka', note: 'Really cool feature-rich and easy-to-use graphics editor for embedded systems projects. No more painstaking code changes and waiting for your microcontroller to flash for the 1000th time in a row to see your edits.', url: 'https://lopaka.app/' },
-      ]},
-      { code: 'R-02', title: 'BOOKS', items: [
-        { name: 'Exact Constraint: Machine Design Using Kinematic Principles', meta: 'Douglass L. Blanding · ASME Press, 1999', note: 'If I had one book to recommend, it would be this masterpiece on mechanical design. Exact-constraint design is a brilliantly simple and effective technique that all engineers and makers should be familiar with.', url: 'https://www.amazon.com/Exact-Constraint-Machine-Kinematic-Principles/dp/B002FRQ5WS' },
-        { name: 'Mechanisms, Linkages, and Mechanical Controls', meta: 'Nicholas P. Chironis · McGraw-Hill, 1965', note: "If you find yourself needing some sort of mechanism, it's probably already in this book waiting to be found. Chironis delivers 354 pages of inspiring mechanisms and designs.", url: 'https://www.amazon.com/Mechanisms-Linkages-Mechanical-Controls-Chironis/dp/0070107750' },
-        { name: "Shigley's Mechanical Engineering Design", meta: 'Richard G. Budynas & J. Keith Nisbett · McGraw-Hill, 11th ed., 2019', note: 'A classic in mechanical engineering with something to give for readers of all levels.', url: 'https://www.amazon.com/Shigleys-Mechanical-Engineering-Richard-Budynas/dp/0073398217' },
-      ]},
-    ];
-    sections.forEach(s => { s.count = String(s.items.length).padStart(2, '0') + ' ITEMS'; });
-    return { sections };
-  }
-}
-</script>
 </body>
 </html>

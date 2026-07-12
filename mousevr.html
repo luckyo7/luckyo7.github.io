@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MouseVR — Evan Kiess</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page" style="min-height:100vh;padding:28px;box-sizing:border-box;display:flex;justify-content:center">
+
+  <!-- floating contact tab (right edge) -->
+  <div class="contact-pill" style="position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:60;background:#131416;border:1px solid rgba(255,255,255,.2);border-right:none;border-radius:11px 0 0 11px;padding:16px 11px;display:flex;flex-direction:column;align-items:center;gap:15px;box-shadow:-10px 0 30px rgba(0,0,0,.45)">
+    <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:8.5px;letter-spacing:.2em;color:#5a5d61">CONTACT&nbsp;/&nbsp;01</div>
+    <div style="width:16px;height:1px;background:rgba(255,255,255,.16)"></div>
+    <a class="nl" href="mailto:ekiess@unc.edu" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">EMAIL</a>
+    <a class="nl" href="https://github.com/luckyo7" target="_blank" rel="noopener" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">GITHUB</a>
+    <a class="nl" href="https://www.linkedin.com/in/evan-kiess/" target="_blank" rel="noopener" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">LINKEDIN</a>
+    <div style="width:7px;height:7px;border:1px solid var(--acc);transform:rotate(45deg)"></div>
+  </div>
+
+  <div style="width:100%;max-width:1240px;background:#0b0c0d;color:#e8e9ea;border:1px solid rgba(255,255,255,.13);position:relative;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:26px 26px;background-position:-1px -1px">
+
+    <div style="position:absolute;top:14px;left:14px;width:11px;height:11px;background:radial-gradient(circle,transparent 3px,rgba(255,255,255,.4) 3px,rgba(255,255,255,.4) 4px,transparent 4px),linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/1px 100% no-repeat,linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/100% 1px no-repeat"></div>
+    <div style="position:absolute;top:14px;right:14px;width:11px;height:11px;background:radial-gradient(circle,transparent 3px,rgba(255,255,255,.4) 3px,rgba(255,255,255,.4) 4px,transparent 4px),linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/1px 100% no-repeat,linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/100% 1px no-repeat"></div>
+
+    <!-- top nav -->
+    <div class="topnav mpad" style="display:flex;justify-content:space-between;align-items:center;padding:16px 34px;border-bottom:1px solid rgba(255,255,255,.13);font-size:10.5px;letter-spacing:.14em;color:#83868a">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <a href="index.html" style="color:#e8e9ea;font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:.06em;text-decoration:none">EDK</a>
+        <span>PORTFOLIO / REV 2026.1</span>
+      </div>
+      <div class="topnav-right" style="display:flex;align-items:center;gap:18px">
+        <a class="nl" href="index.html" style="text-decoration:none;color:#83868a">INDEX</a>
+        <a class="nl" href="resume.pdf" style="text-decoration:none;color:#83868a">RESUME&nbsp;↗</a>
+        <a class="nl" href="resources.html" style="text-decoration:none;color:#83868a">RESOURCES</a>
+        <span style="width:1px;height:14px;background:rgba(255,255,255,.22)"></span>
+        <div style="display:flex;gap:18px;font-size:10.5px;letter-spacing:.14em;white-space:nowrap">
+          <a class="nl" href="mousevr.html" style="text-decoration:none;color:#a9abae">MouseVR</a>
+          <a class="nl" href="robotic-putter.html" style="text-decoration:none;color:#a9abae">Robotic Putter</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div style="min-width:0">
+      <!-- breadcrumb -->
+      <div class="mpad" style="display:flex;justify-content:space-between;padding:14px 40px;border-bottom:1px solid rgba(255,255,255,.13);font-size:10px;letter-spacing:.12em;color:#6f7276">
+        <span><a class="nl" href="index.html#work" style="text-decoration:none;color:#83868a">WORK</a> &nbsp;/&nbsp; P-01</span>
+        <span>2026</span>
+      </div>
+
+      <!-- hero -->
+      <div class="mpad" style="padding:44px 40px 34px;border-bottom:1px solid rgba(255,255,255,.13)">
+        <div style="display:flex;align-items:center;gap:8px;color:#6f7276;font-size:10px;letter-spacing:.12em;margin-bottom:22px">
+          <span>├</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,#4a4d50 0 6px,transparent 6px 10px)"></div><span>ONGOING · RESEARCH</span>
+        </div>
+        <h1 class="d-title" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:66px;line-height:.96;letter-spacing:-.02em;margin:0;color:#f4f4f5">MouseVR</h1>
+        <p style="max-width:640px;margin:24px 0 0;font-size:14px;line-height:1.8;color:#a9abae">An ongoing build. I’m still designing and documenting it — a full writeup with photos and specs will land here soon.</p>
+      </div>
+
+      <!-- spec bar -->
+      <div class="spec-bar" style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid rgba(255,255,255,.13)">
+          <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1)">
+            <div style="font-size:8.5px;letter-spacing:.14em;color:#6f7276">DISCIPLINE</div>
+            <div style="font-size:11.5px;color:#e8e9ea;margin-top:5px;line-height:1.5">—</div>
+          </div>
+          <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1)">
+            <div style="font-size:8.5px;letter-spacing:.14em;color:#6f7276">TOOLS</div>
+            <div style="font-size:11.5px;color:#e8e9ea;margin-top:5px;line-height:1.5">TBD</div>
+          </div>
+          <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1)">
+            <div style="font-size:8.5px;letter-spacing:.14em;color:#6f7276">ROLE</div>
+            <div style="font-size:11.5px;color:#e8e9ea;margin-top:5px;line-height:1.5">Solo build</div>
+          </div>
+          <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1)">
+            <div style="font-size:8.5px;letter-spacing:.14em;color:#6f7276">STATUS</div>
+            <div style="font-size:11.5px;color:#e8e9ea;margin-top:5px;line-height:1.5">Ongoing</div>
+          </div>
+      </div>
+
+      <!-- hero image -->
+      <div class="mpad" style="padding:40px 40px 0">
+        <div style="position:relative;aspect-ratio:16/9;border:1px solid rgba(255,255,255,.15);background:#0e0f11;overflow:hidden">
+          <div style="position:absolute;inset:0">
+            <image-slot id="mousevr-hero" shape="rect" fit="contain" placeholder="MouseVR — hero shot"></image-slot>
+          </div>
+          <div style="position:absolute;bottom:8px;left:8px;font-size:9px;letter-spacing:.1em;color:#8b8e92;background:rgba(11,12,13,.75);padding:3px 7px">FIG 01 — MouseVR</div>
+        </div>
+      </div>
+
+      <!-- overview -->
+      <div class="overview-grid mpad" style="display:grid;grid-template-columns:180px 1fr;gap:30px;padding:40px 40px 34px">
+        <div style="font-size:10.5px;letter-spacing:.14em;color:#6f7276;padding-top:4px">OVERVIEW</div>
+        <div style="max-width:640px;display:flex;flex-direction:column;gap:18px">
+          <p style="margin:0;font-size:13.5px;line-height:1.9;color:#c3c5c8">MouseVR is currently in progress. Check back soon for the full story — what it is, how it works, and what I learned building it.</p>
+          <p style="margin:0;font-size:13.5px;line-height:1.9;color:#c3c5c8">Want the short version before then? Reach out with the contact tab and I’m happy to talk through it.</p>
+        </div>
+      </div>
+
+      <!-- next project -->
+      <a class="nx mpad" href="robotic-putter.html" style="display:flex;justify-content:space-between;align-items:center;padding:30px 40px;border-top:1px solid rgba(255,255,255,.13);text-decoration:none;color:inherit">
+        <div>
+          <div style="font-size:10px;letter-spacing:.14em;color:#6f7276;margin-bottom:8px">NEXT — P-02</div>
+          <div class="nx-title" style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:30px;color:#f0f0f1;transition:color .2s">Robotic Putter</div>
+        </div>
+        <div class="nx-arrow" style="font-size:34px;color:var(--acc);transition:transform .2s">→</div>
+      </a>
+
+      <!-- footer -->
+      <div style="border-top:1px solid rgba(255,255,255,.13);overflow:hidden">
+        <div class="footer-row mpad" style="display:flex;justify-content:space-between;align-items:center;padding:22px 40px;font-size:11px;letter-spacing:.08em;color:#83868a">
+          <span style="color:#e8e9ea">© 2026 EVAN KIESS</span>
+          <div style="display:flex;gap:24px">
+            <a class="nl" href="mailto:ekiess@unc.edu" style="text-decoration:none;color:#83868a">EMAIL</a>
+            <a class="nl" href="https://github.com/luckyo7" target="_blank" rel="noopener" style="text-decoration:none;color:#83868a">GITHUB</a>
+            <a class="nl" href="https://www.linkedin.com/in/evan-kiess/" target="_blank" rel="noopener" style="text-decoration:none;color:#83868a">LINKEDIN</a>
+          </div>
+          <a href="#" style="text-decoration:none;color:var(--acc)">BACK TO TOP&nbsp;↑</a>
+        </div>
+        <div class="wordmark" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:150px;line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.14);padding:0 0 0 34px;margin:4px 0 -26px;white-space:nowrap;pointer-events:none">EVAN KIESS<span style="-webkit-text-stroke:1px var(--acc)">.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="image-slot.js"></script>
+</body>
+</html>

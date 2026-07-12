@@ -1,55 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet data-dc-atomics>
+<title>Evan Kiess — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  body{margin:0;background:#141414;font-family:'IBM Plex Mono',ui-monospace,monospace;--acc:#e0a04a}
-  a{color:inherit}
-  .pj:hover .pj-num{color:var(--acc)}
-  .pj-frame{transition:border-color .25s}
-  .pj:hover .pj-frame{border-color:var(--acc)}
-  .pj-ov{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity .28s ease;background:rgba(10,11,12,.5);box-shadow:inset 0 0 0 1.5px var(--acc)}
-  .pj:hover .pj-ov{opacity:1}
-  .pj-ov .br{position:absolute;width:18px;height:18px;border:1.5px solid var(--acc);transition:transform .28s ease}
-  .pj-ov .tl{top:10px;left:10px;border-right:0;border-bottom:0;transform:translate(4px,4px)}
-  .pj-ov .tr{top:10px;right:10px;border-left:0;border-bottom:0;transform:translate(-4px,4px)}
-  .pj-ov .bl{bottom:10px;left:10px;border-right:0;border-top:0;transform:translate(4px,-4px)}
-  .pj-ov .brr{bottom:10px;right:10px;border-left:0;border-top:0;transform:translate(-4px,-4px)}
-  .pj:hover .pj-ov .br{transform:translate(0,0)}
-  .pj-ov .tag{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:10px;letter-spacing:.2em;color:#fff}
-  .pj:hover .pj-go{opacity:1;transform:translateX(0)}
-  .nl:hover{color:var(--acc)!important}
-  @media(max-width:760px){
-    body{overflow-x:hidden}
-    .page{padding:10px!important}
-    .contact-pill{display:none!important}
-    .topnav{flex-direction:column!important;align-items:flex-start!important;gap:10px!important}
-    .topnav-right{flex-wrap:wrap!important;gap:8px 14px!important}
-    .mpad{padding-left:16px!important;padding-right:16px!important}
-    #about,#work{padding-left:16px!important;padding-right:16px!important}
-    .hero-row{gap:14px!important}
-    .hero-name{font-size:44px!important}
-    .hero-meta{flex-direction:column!important;align-items:flex-start!important;gap:14px!important}
-    .coords{text-align:left!important}
-    .proj-grid{grid-template-columns:1fr!important}
-    .footer-row{flex-wrap:wrap!important;gap:10px 16px!important;justify-content:flex-start!important}
-    .wordmark{font-size:60px!important}
-  }
-</style>
-</helmet>
-
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <div class="page" style="min-height:100vh;padding:28px;box-sizing:border-box;display:flex;justify-content:center">
 
-  <!-- floating contact (edge pill) -->
+  <!-- floating contact tab (right edge) -->
   <div class="contact-pill" style="position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:60;background:#131416;border:1px solid rgba(255,255,255,.2);border-right:none;border-radius:11px 0 0 11px;padding:16px 11px;display:flex;flex-direction:column;align-items:center;gap:15px;box-shadow:-10px 0 30px rgba(0,0,0,.45)">
     <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:8.5px;letter-spacing:.2em;color:#5a5d61">CONTACT&nbsp;/&nbsp;01</div>
     <div style="width:16px;height:1px;background:rgba(255,255,255,.16)"></div>
@@ -76,8 +39,8 @@
         <a class="nl" href="resources.html" style="text-decoration:none;color:#83868a">RESOURCES</a>
         <span style="width:1px;height:14px;background:rgba(255,255,255,.22)"></span>
         <div style="display:flex;gap:18px;font-size:10.5px;letter-spacing:.14em;white-space:nowrap">
-          <a class="nl" href="detail.html?p=mousevr" style="text-decoration:none;color:#a9abae">MouseVR</a>
-          <a class="nl" href="detail.html?p=robotic-putter" style="text-decoration:none;color:#a9abae">Robotic Putter</a>
+          <a class="nl" href="mousevr.html" style="text-decoration:none;color:#a9abae">MouseVR</a>
+          <a class="nl" href="robotic-putter.html" style="text-decoration:none;color:#a9abae">Robotic Putter</a>
         </div>
       </div>
     </div>
@@ -97,7 +60,7 @@
               <span style="position:absolute;width:9px;height:9px;border:1px solid var(--acc);top:-1px;right:-1px;border-left:0;border-bottom:0"></span>
               <span style="position:absolute;width:9px;height:9px;border:1px solid var(--acc);bottom:-1px;left:-1px;border-right:0;border-top:0"></span>
               <span style="position:absolute;width:9px;height:9px;border:1px solid var(--acc);bottom:-1px;right:-1px;border-left:0;border-top:0"></span>
-              <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="headshot" shape="rect" fit="cover" placeholder="headshot" hint-size="100%,100%"></x-import>
+              <image-slot id="headshot" shape="rect" fit="cover" placeholder="headshot"></image-slot>
             </div>
             <div style="width:140px;font-size:9px;letter-spacing:.16em;color:#6f7276;margin-top:8px;display:flex;justify-content:space-between"><span>FIG. 01</span><span>E. KIESS</span></div>
           </div>
@@ -117,27 +80,158 @@
 
       <!-- projects grid -->
       <div class="proj-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid rgba(255,255,255,.13)">
-        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="8">
-          <a href="{{ p.href }}" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
+          <a href="mousevr.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
             <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
-              <span class="pj-num" style="transition:color .2s">P-{{ p.n }}</span>
-              <span style="display:flex;align-items:center;gap:6px"><sc-if value="{{ p.ongoing }}" hint-placeholder-val="{{ false }}"><span style="width:5px;height:5px;background:var(--acc);border-radius:50%"></span></sc-if>{{ p.cat }}</span>
+              <span class="pj-num" style="transition:color .2s">P-01</span>
+              <span style="display:flex;align-items:center;gap:6px"><span style="width:5px;height:5px;background:var(--acc);border-radius:50%"></span>ONGOING · RESEARCH</span>
             </div>
             <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
               <div class="pj-img" style="position:absolute;inset:0">
-                <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{ p.slotA }}" shape="rect" fit="{{ p.fit }}" placeholder="{{ p.ph }}" hint-size="100%,100%"></x-import>
+                <image-slot id="a-mousevr" shape="rect" fit="contain" placeholder="mousevr photo"></image-slot>
               </div>
               <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
-              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG {{ p.n }}</div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 01</div>
             </div>
-            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">{{ p.title }}</h3>
-            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">{{ p.desc }}</p>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">MouseVR</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">In the workshop now — a full writeup is on the way.</p>
             <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
-              <span>{{ p.tools }}</span>
+              <span>IN PROGRESS</span>
               <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
             </div>
           </a>
-        </sc-for>
+          <a href="robotic-putter.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+              <span class="pj-num" style="transition:color .2s">P-02</span>
+              <span style="display:flex;align-items:center;gap:6px"><span style="width:5px;height:5px;background:var(--acc);border-radius:50%"></span>ONGOING · ROBOTICS</span>
+            </div>
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+              <div class="pj-img" style="position:absolute;inset:0">
+                <image-slot id="a-robputter" shape="rect" fit="contain" placeholder="robotic putter photo"></image-slot>
+              </div>
+              <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 02</div>
+            </div>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">Robotic Putter</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">In the workshop now — a full writeup is on the way.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+              <span>IN PROGRESS</span>
+              <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
+            </div>
+          </a>
+          <a href="press.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+              <span class="pj-num" style="transition:color .2s">P-03</span>
+              <span style="display:flex;align-items:center;gap:6px">MECHANICAL</span>
+            </div>
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+              <div class="pj-img" style="position:absolute;inset:0">
+                <image-slot id="a05" shape="rect" fit="contain" placeholder="press photo"></image-slot>
+              </div>
+              <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 03</div>
+            </div>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">Modular Vertical Press</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">A modular benchtop press for heat-set threaded inserts, built entirely from leftover project materials.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+              <span>FUSION 360 · FDM</span>
+              <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
+            </div>
+          </a>
+          <a href="tiny-tuner.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+              <span class="pj-num" style="transition:color .2s">P-04</span>
+              <span style="display:flex;align-items:center;gap:6px">EMBEDDED</span>
+            </div>
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+              <div class="pj-img" style="position:absolute;inset:0">
+                <image-slot id="a01" shape="rect" fit="contain" placeholder="tiny tuner photo"></image-slot>
+              </div>
+              <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 04</div>
+            </div>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">Tiny Tuner</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">A compact guitar tuner built with an ESP32, MEMS microphone, and OLED display.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+              <span>ESP32 · MEMS · OLED</span>
+              <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
+            </div>
+          </a>
+          <a href="basketbot.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+              <span class="pj-num" style="transition:color .2s">P-05</span>
+              <span style="display:flex;align-items:center;gap:6px">ROBOTICS</span>
+            </div>
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+              <div class="pj-img" style="position:absolute;inset:0">
+                <image-slot id="a02" shape="rect" fit="contain" placeholder="basketbot photo"></image-slot>
+              </div>
+              <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 05</div>
+            </div>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">BasketBot</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">A basketball-shooting robot built with Arduino and computer vision.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+              <span>ARDUINO · OPENCV</span>
+              <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
+            </div>
+          </a>
+          <a href="telecaster.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+              <span class="pj-num" style="transition:color .2s">P-06</span>
+              <span style="display:flex;align-items:center;gap:6px">FABRICATION</span>
+            </div>
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+              <div class="pj-img" style="position:absolute;inset:0">
+                <image-slot id="a03" shape="rect" fit="contain" placeholder="telecaster photo"></image-slot>
+              </div>
+              <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 06</div>
+            </div>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">’72 Telecaster Deluxe</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">A from-scratch electric guitar inspired by the 1972 Fender Telecaster Deluxe.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+              <span>ROUTER · HANDTOOLS · FDM</span>
+              <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
+            </div>
+          </a>
+          <a href="guitar-stand.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+              <span class="pj-num" style="transition:color .2s">P-07</span>
+              <span style="display:flex;align-items:center;gap:6px">FABRICATION</span>
+            </div>
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+              <div class="pj-img" style="position:absolute;inset:0">
+                <image-slot id="a04" shape="rect" fit="contain" placeholder="guitar stand photo"></image-slot>
+              </div>
+              <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 07</div>
+            </div>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">Guitar Stand</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">A laser-cut poplar plywood stand in dark walnut, built to hold acoustic and electric guitars.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+              <span>LASER · PLYWOOD</span>
+              <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
+            </div>
+          </a>
+          <a href="mac-dock.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+              <span class="pj-num" style="transition:color .2s">P-08</span>
+              <span style="display:flex;align-items:center;gap:6px">DESIGN</span>
+            </div>
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+              <div class="pj-img" style="position:absolute;inset:0">
+                <image-slot id="a06" shape="rect" fit="contain" placeholder="dock photo"></image-slot>
+              </div>
+              <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 08</div>
+            </div>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">MacBook Air Dock</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">A sleek hardwood dock for the M2 MacBook Air with clean cable management.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+              <span>ROUTER · HANDTOOLS · PLYWOOD</span>
+              <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
+            </div>
+          </a>
       </div>
 
       <!-- footer -->
@@ -156,30 +250,6 @@
     </div>
   </div>
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    const projects = [
-      { n: '01', slug: 'mousevr', title: 'MouseVR', cat: 'ONGOING · RESEARCH', desc: 'In the workshop now — a full writeup is on the way.', tools: 'IN PROGRESS', slotA: 'a-mousevr', ph: 'mousevr photo', ongoing: true },
-      { n: '02', slug: 'robotic-putter', title: 'Robotic Putter', cat: 'ONGOING · ROBOTICS', desc: 'In the workshop now — a full writeup is on the way.', tools: 'IN PROGRESS', slotA: 'a-robputter', ph: 'robotic putter photo', ongoing: true },
-      { n: '03', slug: 'press', title: 'Modular Vertical Press', cat: 'MECHANICAL', desc: 'A modular benchtop press for heat-set threaded inserts, built entirely from leftover project materials.', tools: 'FUSION 360 · FDM', slotA: 'a05', ph: 'press photo' },
-      { n: '04', slug: 'tiny-tuner', title: 'Tiny Tuner', cat: 'EMBEDDED', desc: 'A compact guitar tuner built with an ESP32, MEMS microphone, and OLED display.', tools: 'ESP32 · MEMS · OLED', slotA: 'a01', ph: 'tiny tuner photo' },
-      { n: '05', slug: 'basketbot', title: 'BasketBot', cat: 'ROBOTICS', desc: 'A basketball-shooting robot built with Arduino and computer vision.', tools: 'ARDUINO · OPENCV', slotA: 'a02', ph: 'basketbot photo' },
-      { n: '06', slug: 'telecaster', title: '\u201972 Telecaster Deluxe', cat: 'FABRICATION', desc: 'A from-scratch electric guitar inspired by the 1972 Fender Telecaster Deluxe.', tools: 'ROUTER · HANDTOOLS · FDM', slotA: 'a03', ph: 'telecaster photo' },
-      { n: '07', slug: 'guitar-stand', title: 'Guitar Stand', cat: 'FABRICATION', desc: 'A laser-cut poplar plywood stand in dark walnut, built to hold acoustic and electric guitars.', tools: 'LASER · PLYWOOD', slotA: 'a04', ph: 'guitar stand photo' },
-      { n: '08', slug: 'mac-dock', title: 'MacBook Air Dock', cat: 'DESIGN', desc: 'A sleek hardwood dock for the M2 MacBook Air with clean cable management.', tools: 'ROUTER · HANDTOOLS · PLYWOOD', slotA: 'a06', ph: 'dock photo' },
-    ];
-    // Per-project photo framing. 'contain' shows the whole photo, letterboxed
-    // against the frame's dark background (no cropping, rows stay uniform);
-    // 'cover' fills the frame edge-to-edge, cropping overflow. Frame is a fixed
-    // 4/3 either way, so the grid stays neat regardless of photo dimensions.
-    // Override any project here, e.g. fit['basketbot'] = 'cover'.
-    const fit = {};
-    projects.forEach(p => { p.href = 'detail.html?p=' + p.slug; p.fit = fit[p.slug] || 'contain'; });
-    return { projects };
-  }
-}
-</script>
+<script src="image-slot.js"></script>
 </body>
 </html>
