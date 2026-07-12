@@ -99,7 +99,7 @@
       const slug = new URLSearchParams(location.search).get('p');
       if (slug) return '.image-slots.p-' + slug.replace(/[^a-z0-9_-]/gi, '') + '.state.json';
       const base = (location.pathname.split('/').pop() || '')
-        .replace(/\.dc\.html$/i, '').replace(/\.html$/i, '').replace(/[^a-z0-9_-]/gi, '') || 'root';
+        .replace(/\.dc\.html$/i, '').replace(/\.html$/i, '').replace(/[^a-z0-9_-]/gi, '') || 'index';
       return '.image-slots.' + base + '.state.json';
     } catch (e) {
       return '.image-slots.state.json';
