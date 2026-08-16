@@ -2,6 +2,8 @@
 body{margin:0;background:#141414;font-family:'IBM Plex Mono',ui-monospace,monospace;--acc:#e0a04a}
 a{color:inherit}
 .nl:hover{color:var(--acc)!important}
+/* bold text picks up the amber accent */
+strong,b{color:var(--acc)}
 
 /* landing project cards */
 .pj:hover .pj-num{color:var(--acc)}
