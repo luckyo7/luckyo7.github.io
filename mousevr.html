@@ -53,51 +53,104 @@
         <span>2026</span>
       </div>
 
-      <!-- hero -->
-      <div class="mpad" style="padding:44px 40px 34px;border-bottom:1px solid rgba(255,255,255,.13)">
-        <div style="display:flex;align-items:center;gap:8px;color:#6f7276;font-size:10px;letter-spacing:.12em;margin-bottom:22px">
-          <span>├</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,#4a4d50 0 6px,transparent 6px 10px)"></div><span>ONGOING · RESEARCH</span>
+      <!-- hero: title + bleeding render -->
+      <div class="overview-grid" style="display:grid;grid-template-columns:1.05fr .95fr;border-bottom:1px solid rgba(255,255,255,.13)">
+        <div class="mpad" style="padding:44px 34px 34px 40px">
+          <div style="display:flex;align-items:center;gap:8px;color:#6f7276;font-size:10px;letter-spacing:.12em;margin-bottom:22px">
+            <span>├</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,#4a4d50 0 6px,transparent 6px 10px)"></div><span>ONGOING · RESEARCH</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,#4a4d50 0 6px,transparent 6px 10px)"></div><span>┤</span>
+          </div>
+          <h1 class="d-title" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:60px;line-height:.96;letter-spacing:-.02em;margin:0;color:#f4f4f5">MouseVR</h1>
+          <p style="margin:22px 0 0;font-size:14px;line-height:1.8;color:#a9abae">Development of MRI-compatible virtual reality goggles for fMRI in awake mice.<br><br>This project started through UNC's Summer Undergraduate Research Fellowship (<b>SURF</b>) and is being continued as the topic of my undergraduate honors thesis.</p>
+          <div style="display:flex;gap:10px;margin-top:26px;flex-wrap:wrap">
+            <span style="font-size:9.5px;letter-spacing:.14em;color:#c3c5c8;border:1px solid rgba(255,255,255,.18);padding:6px 10px">FUSION</span>
+            <span style="font-size:9.5px;letter-spacing:.14em;color:#c3c5c8;border:1px solid rgba(255,255,255,.18);padding:6px 10px">3D PRINTED</span>
+            <span style="font-size:9.5px;letter-spacing:.14em;color:#c3c5c8;border:1px solid rgba(255,255,255,.18);padding:6px 10px">OPTOMECHANICS</span>
+            <span style="font-size:9.5px;letter-spacing:.14em;color:#c3c5c8;border:1px solid rgba(255,255,255,.18);padding:6px 10px">MRI COMPATIBILITY</span>
+          </div>
         </div>
-        <h1 class="d-title" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:66px;line-height:.96;letter-spacing:-.02em;margin:0;color:#f4f4f5">MouseVR</h1>
-        <p style="max-width:640px;margin:24px 0 0;font-size:14px;line-height:1.8;color:#a9abae">An ongoing build. I’m still designing and documenting it — a full writeup with photos and specs will land here soon.</p>
+        <div style="border-left:1px solid rgba(255,255,255,.13);position:relative;min-height:340px;background:#0e0f11;overflow:hidden">
+          <div style="position:absolute;inset:0">
+            <img src="assets/mouse_vr.png" alt="MouseVR prototype" style="width:100%;height:100%;object-fit:cover">
+          </div>
+          <div style="position:absolute;bottom:8px;left:8px;font-size:9px;letter-spacing:.1em;color:#8b8e92;background:rgba(11,12,13,.75);padding:3px 7px">FIG 01 — PROTOTYPE</div>
+        </div>
       </div>
 
       <!-- spec bar -->
       <div class="spec-bar" style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid rgba(255,255,255,.13)">
           <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1)">
             <div style="font-size:8.5px;letter-spacing:.14em;color:#6f7276">DISCIPLINE</div>
-            <div style="font-size:11.5px;color:#e8e9ea;margin-top:5px;line-height:1.5">—</div>
+            <div style="font-size:11.5px;color:#e8e9ea;margin-top:5px;line-height:1.5">Biomedical engineering, neuroscience</div>
           </div>
           <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1)">
-            <div style="font-size:8.5px;letter-spacing:.14em;color:#6f7276">TOOLS</div>
-            <div style="font-size:11.5px;color:#e8e9ea;margin-top:5px;line-height:1.5">TBD</div>
+            <div style="font-size:8.5px;letter-spacing:.14em;color:#6f7276">PROGRAM</div>
+            <div style="font-size:11.5px;color:#e8e9ea;margin-top:5px;line-height:1.5">UNC CAMRI · SURF Funded</div>
           </div>
           <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1)">
             <div style="font-size:8.5px;letter-spacing:.14em;color:#6f7276">ROLE</div>
-            <div style="font-size:11.5px;color:#e8e9ea;margin-top:5px;line-height:1.5">Solo build</div>
+            <div style="font-size:11.5px;color:#e8e9ea;margin-top:5px;line-height:1.5">Individual</div>
           </div>
           <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1)">
             <div style="font-size:8.5px;letter-spacing:.14em;color:#6f7276">STATUS</div>
-            <div style="font-size:11.5px;color:#e8e9ea;margin-top:5px;line-height:1.5">Ongoing</div>
+            <div style="font-size:11.5px;color:#e8e9ea;margin-top:5px;line-height:1.5">Ongoing research project</div>
           </div>
       </div>
 
-      <!-- hero image -->
-      <div class="mpad" style="padding:40px 40px 0">
-        <div style="position:relative;aspect-ratio:16/9;border:1px solid rgba(255,255,255,.15);background:#0e0f11;overflow:hidden">
-          <div style="position:absolute;inset:0">
-            <image-slot id="mousevr-hero" shape="rect" fit="contain" placeholder="MouseVR — hero shot"></image-slot>
-          </div>
-          <div style="position:absolute;bottom:8px;left:8px;font-size:9px;letter-spacing:.1em;color:#8b8e92;background:rgba(11,12,13,.75);padding:3px 7px">FIG 01 — MouseVR</div>
+      <!-- contents rail + numbered sections -->
+      <div class="overview-grid" style="display:grid;grid-template-columns:220px 1fr">
+        <div class="mpad" style="border-right:1px solid rgba(255,255,255,.13);padding:34px 24px;display:flex;flex-direction:column;gap:14px;font-size:10px;letter-spacing:.12em;color:#6f7276">
+          <div style="color:#83868a">CONTENTS</div>
+          <a class="nl" href="#s01" style="text-decoration:none;color:#c3c5c8">01 &nbsp;THE QUESTION</a>
+          <a class="nl" href="#s02" style="text-decoration:none;color:#c3c5c8">02 &nbsp;WHY IT MATTERS</a>
+          <a class="nl" href="#s03" style="text-decoration:none;color:#c3c5c8">03 &nbsp;CONSTRAINTS</a>
+          <a class="nl" href="#s04" style="text-decoration:none;color:#c3c5c8">04 &nbsp;WHAT WE BUILT</a>
+          <a class="nl" href="#s05" style="text-decoration:none;color:#c3c5c8">05 &nbsp;IMPACT</a>
         </div>
-      </div>
-
-      <!-- overview -->
-      <div class="overview-grid mpad" style="display:grid;grid-template-columns:180px 1fr;gap:30px;padding:40px 40px 34px">
-        <div style="font-size:10.5px;letter-spacing:.14em;color:#6f7276;padding-top:4px">OVERVIEW</div>
-        <div style="max-width:640px;display:flex;flex-direction:column;gap:18px">
-          <p style="margin:0;font-size:13.5px;line-height:1.9;color:#c3c5c8">MouseVR is currently in progress. Check back soon for the full story — what it is, how it works, and what I learned building it.</p>
-          <p style="margin:0;font-size:13.5px;line-height:1.9;color:#c3c5c8">Want the short version before then? Reach out with the contact tab and I’m happy to talk through it.</p>
+        <div>
+          <div id="s01" class="mpad" style="padding:34px 40px;border-bottom:1px solid rgba(255,255,255,.13)">
+            <div class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin-bottom:14px">01 — THE QUESTION</div>
+            <p style="margin:0;max-width:700px;font-family:'Space Grotesk',sans-serif;font-size:24px;line-height:1.4;color:#f0f0f1;text-wrap:pretty">How can we deliver a virtual environment to an awake mouse during a whole-brain fMRI scan?</p>
+          </div>
+          <div id="s02" class="mpad" style="padding:30px 40px;border-bottom:1px solid rgba(255,255,255,.13)">
+            <div class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin-bottom:12px">02 — WHY IT MATTERS</div>
+            <p style="margin:0;max-width:700px;font-size:13.5px;line-height:1.9;color:#c3c5c8">In traditional animal fMRI scans, the subject must be sedated to prevent head movements from corrupting image quality. This prevents the mouse from interacting meaningfully with a virtual environment and raises concerns about the sedated brain state being the “ground truth.”<br><br>However, the UNC Center for Animal MRI (CAMRI) has developed a novel technique for performing awake fMRI scans.<sup style="font-size:9px;color:var(--acc);letter-spacing:0">1</sup><br><br>With this technique, we hope to introduce a new experimental modality for animal fMRI researchers: <b>virtual reality</b>. When combined with CAMRI’s existing treadmill setup, many new and exciting experiments become possible, like traversing a maze.</p>
+            <div style="margin:18px 0 0;max-width:700px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.12);font-size:10.5px;line-height:1.7;color:#6f7276">
+              <sup style="color:var(--acc)">1</sup>&nbsp;<a class="nl" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11952411/" target="_blank" rel="noopener" style="color:#83868a;text-decoration:underline;text-decoration-color:rgba(255,255,255,.25);text-underline-offset:3px">SORDINO for Silent, Sensitive, Specific, and Artifact-Resisting fMRI in awake behaving mice — UNC CAMRI&nbsp;↗</a>
+            </div>
+          </div>
+          <div id="s03" class="mpad" style="padding:30px 40px;border-bottom:1px solid rgba(255,255,255,.13);display:flex;flex-direction:column;gap:18px">
+            <div class="sec-label" style="font-size:9.5px;letter-spacing:.14em">03 — CONSTRAINTS</div>
+            <div style="display:flex;gap:14px;align-items:baseline">
+              <span style="color:var(--acc);font-size:12px">◆</span>
+              <p style="margin:0;font-size:13px;line-height:1.8;color:#c3c5c8">Size - everything must fit inside the scanner's small bore, together with the head-fixed mouse.</p>
+            </div>
+            <div style="display:flex;gap:14px;align-items:baseline">
+              <span style="color:var(--acc);font-size:12px">◆</span>
+              <p style="margin:0;font-size:13px;line-height:1.8;color:#c3c5c8">MRI Compatibility - magnetic components become dangerous when placed in the MRI, and even safe materials can disturb image quality by introducing unwanted artifacts.</p>
+            </div>
+          </div>
+          <div id="s04" class="mpad" style="padding:30px 40px;border-bottom:1px solid rgba(255,255,255,.13)">
+            <div class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin-bottom:16px">04 — WHAT WE BUILT</div>
+            <p style="margin:0 0 20px;max-width:700px;font-size:13.5px;line-height:1.9;color:#c3c5c8">PLA 3D-printed enclosures, acrylic Fresnel lenses, and modified LED displays make up an MRI-compatible virtual reality system for mice.</p>
+            <div style="position:relative;aspect-ratio:16/9;border:1px solid rgba(255,255,255,.15);background:#0e0f11;overflow:hidden">
+              <div style="position:absolute;inset:0">
+                <img src="assets/mousevr_exploded.png" alt="Exploded view of the MouseVR prototype" style="width:100%;height:100%;object-fit:contain">
+              </div>
+              <div style="position:absolute;bottom:8px;left:8px;font-size:9px;letter-spacing:.1em;color:#8b8e92;background:rgba(11,12,13,.75);padding:3px 7px">FIG 02 — EXPLODED VIEW</div>
+            </div>
+          </div>
+          <div id="s05" class="mpad" style="padding:30px 40px 40px">
+            <div class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin-bottom:20px">05 — IMPACT</div>
+            <div class="feat-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:30px">
+            <div>
+              <div style="font-size:9.5px;letter-spacing:.14em;color:#6f7276;margin-bottom:12px">FOR THE FIELD</div>
+              <p style="margin:0;font-size:12.5px;line-height:1.85;color:#8b8e92">The goggles allow labs to perform experiments in controlled virtual environments while measuring the whole-brain activity of mice, creating a link between specific experiences and observed brain activity and behavior.</p>
+            </div>
+            <div>
+              <div style="font-size:9.5px;letter-spacing:.14em;color:#6f7276;margin-bottom:12px">FOR EVERYONE ELSE</div>
+              <p style="margin:0;font-size:12.5px;line-height:1.85;color:#8b8e92">By revealing the links between experience, brain activity, learning, and emotion in mice, neuroscientists hope to discover foundational truths about these processes in human brains.</p>
+            </div>
+          </div>
         </div>
       </div>
 
