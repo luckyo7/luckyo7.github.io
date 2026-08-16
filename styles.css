@@ -20,6 +20,10 @@ strong,b{color:var(--acc)}
 .pj-ov .tag{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:10px;letter-spacing:.2em;color:#fff}
 .pj:hover .pj-go{opacity:1;transform:translateX(0)}
 
+/* mousevr numbered sections */
+.sec-label{transition:color .2s}
+.sec:hover .sec-label{color:var(--acc)}
+
 /* project-page next link */
 .nx:hover .nx-title{color:var(--acc)}
 .nx:hover .nx-arrow{transform:translateX(6px)}
