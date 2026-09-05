@@ -1,38 +1,76 @@
-/* EDK portfolio — shared styles. Edit global look here. */
-body{margin:0;background:#141414;font-family:'IBM Plex Mono',ui-monospace,monospace;--acc:#e0a04a}
+/* EDK portfolio - shared styles. Edit global look here. */
+
+/* ---- design tokens -------------------------------------------------------
+   The whole palette lives here. Inline styles reference these by name, so a
+   colour is changed in one place. Text-ramp steps are annotated with their
+   measured contrast ratio against --panel; every step used for text clears
+   WCAG AA (4.5:1). */
+:root{
+  color-scheme:dark;   /* UA canvas, scrollbars and controls follow the locked dark theme */
+  --acc:#e0a04a;        /* amber accent, 8.67:1  */
+  --ink:#f4f4f5;        /* display headings      17.81:1 */
+  --ink-2:#f0f0f1;      /* project + card titles 17.19:1 */
+  --fg:#e8e9ea;         /* base text             16.11:1 */
+  --fg-2:#c3c5c8;       /* section body          11.32:1 */
+  --fg-3:#a9abae;       /* hero paragraph         8.51:1 */
+  --fg-4:#8b8e92;       /* card blurbs            5.95:1 */
+  --fg-5:#83868a;       /* nav + footer links     5.35:1 */
+  --fg-6:#7c7f83;       /* smallest labels        4.87:1 - AA floor */
+  --ground:#141414;     /* outer mat   */
+  --panel:#0b0c0d;      /* sheet       */
+  --panel-2:#131416;    /* contact rail */
+  --frame:#0e0f11;      /* image frame ground */
+  --rule:#4a4d50;       /* dashed rules (decorative, non-text) */
+  --line:rgba(255,255,255,.13);        /* structural hairline */
+  --line-frame:rgba(255,255,255,.15);  /* image frame border  */
+  --line-dash:rgba(255,255,255,.14);   /* dashed dividers     */
+  --grid:rgba(255,255,255,.028);       /* blueprint graticule */
+}
+
+body{margin:0;background:var(--ground);font-family:'IBM Plex Mono',ui-monospace,monospace}
 a{color:inherit}
 .nl:hover{color:var(--acc)!important}
 /* bold text picks up the amber accent */
 strong,b{color:var(--acc)}
 
+/* skip link: first thing in the tab order, invisible until focused */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--panel-2);color:var(--fg);
+  border:1px solid var(--acc);padding:10px 16px;font-size:11px;letter-spacing:.14em;text-decoration:none}
+.skip:focus{left:12px;top:12px}
+
+/* keyboard focus mirrors the amber hover language, so keyboard users get the
+   same affordances pointer users get */
+a:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.nl:focus-visible{color:var(--acc)!important}
+
 /* landing project cards */
-.pj:hover .pj-num{color:var(--acc)}
+.pj:hover .pj-num,.pj:focus-visible .pj-num{color:var(--acc)}
 .pj-frame{transition:border-color .25s}
-.pj:hover .pj-frame{border-color:var(--acc)}
+.pj:hover .pj-frame,.pj:focus-visible .pj-frame{border-color:var(--acc)}
 .pj-ov{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity .28s ease;background:rgba(10,11,12,.5);box-shadow:inset 0 0 0 1.5px var(--acc)}
-.pj:hover .pj-ov{opacity:1}
+.pj:hover .pj-ov,.pj:focus-visible .pj-ov{opacity:1}
 .pj-ov .br{position:absolute;width:18px;height:18px;border:1.5px solid var(--acc);transition:transform .28s ease}
 .pj-ov .tl{top:10px;left:10px;border-right:0;border-bottom:0;transform:translate(4px,4px)}
 .pj-ov .tr{top:10px;right:10px;border-left:0;border-bottom:0;transform:translate(-4px,4px)}
 .pj-ov .bl{bottom:10px;left:10px;border-right:0;border-top:0;transform:translate(4px,-4px)}
 .pj-ov .brr{bottom:10px;right:10px;border-left:0;border-top:0;transform:translate(-4px,-4px)}
-.pj:hover .pj-ov .br{transform:translate(0,0)}
+.pj:hover .pj-ov .br,.pj:focus-visible .pj-ov .br{transform:translate(0,0)}
 .pj-ov .tag{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:10px;letter-spacing:.2em;color:#fff}
-.pj:hover .pj-go{opacity:1;transform:translateX(0)}
+.pj:hover .pj-go,.pj:focus-visible .pj-go{opacity:1;transform:translateX(0)}
 
 /* mousevr numbered sections */
 .sec-label{transition:color .2s}
-.sec:hover .sec-label{color:var(--acc)}
+.sec:hover .sec-label,.sec:focus-within .sec-label{color:var(--acc)}
 
 /* project-page next link */
-.nx:hover .nx-title{color:var(--acc)}
-.nx:hover .nx-arrow{transform:translateX(6px)}
+.nx:hover .nx-title,.nx:focus-visible .nx-title{color:var(--acc)}
+.nx:hover .nx-arrow,.nx:focus-visible .nx-arrow{transform:translateX(6px)}
 
 /* resources rows */
-.rrow:hover{background:rgba(255,255,255,.035)}
-.rrow:hover .rr-bar{transform:scaleY(1)!important}
-.rrow:hover .rr-arrow{opacity:1!important;transform:translateX(0)!important}
-.rrow:hover .rr-name{color:var(--acc)!important;text-decoration-color:var(--acc)!important}
+.rrow:hover,.rrow:focus-visible{background:rgba(255,255,255,.035)}
+.rrow:hover .rr-bar,.rrow:focus-visible .rr-bar{transform:scaleY(1)!important}
+.rrow:hover .rr-arrow,.rrow:focus-visible .rr-arrow{opacity:1!important;transform:translateX(0)!important}
+.rrow:hover .rr-name,.rrow:focus-visible .rr-name{color:var(--acc)!important;text-decoration-color:var(--acc)!important}
 
 /* mobile */
 @media(max-width:760px){
@@ -57,4 +95,14 @@ strong,b{color:var(--acc)}
   .rr-arrow{display:none!important}
   .footer-row{flex-wrap:wrap!important;gap:10px 16px!important;justify-content:flex-start!important}
   .wordmark{font-size:60px!important}
+}
+
+/* the site's motion is hover-only and short, but honour the preference anyway */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    transition-duration:.01ms!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+  }
 }

@@ -3,253 +3,280 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Evan Kiess — Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Evan Kiess / Portfolio</title>
+<meta name="description" content="Fourth-year biomedical engineering student at UNC and NC State. Projects in embedded systems, mechanical design, control systems, and surgical robotics.">
+<link rel="canonical" href="https://ekiess.com/">
+<meta name="theme-color" content="#0b0c0d">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Evan Kiess">
+<meta property="og:title" content="Evan Kiess / Portfolio">
+<meta property="og:description" content="Fourth-year biomedical engineering student at UNC and NC State. Projects in embedded systems, mechanical design, control systems, and surgical robotics.">
+<meta property="og:url" content="https://ekiess.com/">
+<meta property="og:image" content="https://ekiess.com/assets/mouse_vr.png">
+<meta property="og:image:alt" content="The MouseVR prototype: 3D-printed MRI-compatible goggles for awake-mouse fMRI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Evan Kiess / Portfolio">
+<meta name="twitter:description" content="Fourth-year biomedical engineering student at UNC and NC State. Projects in embedded systems, mechanical design, control systems, and surgical robotics.">
+<meta name="twitter:image" content="https://ekiess.com/assets/mouse_vr.png">
+<link rel="preload" href="assets/fonts/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/space-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="page" style="min-height:100vh;padding:28px;box-sizing:border-box;display:flex;justify-content:center">
+<a class="skip" href="#main">Skip to content</a>
+<div class="page" style="min-height:100dvh;padding:28px;box-sizing:border-box;display:flex;justify-content:center">
 
   <!-- floating contact tab (right edge) -->
-  <div class="contact-pill" style="position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:60;background:#131416;border:1px solid rgba(255,255,255,.2);border-right:none;border-radius:11px 0 0 11px;padding:16px 11px;display:flex;flex-direction:column;align-items:center;gap:15px;box-shadow:-10px 0 30px rgba(0,0,0,.45)">
-    <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:8.5px;letter-spacing:.2em;color:#5a5d61">CONTACT&nbsp;/&nbsp;01</div>
+  <nav class="contact-pill" aria-label="Contact" style="position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:60;background:var(--panel-2);border:1px solid rgba(255,255,255,.2);border-right:none;border-radius:11px 0 0 11px;padding:16px 11px;display:flex;flex-direction:column;align-items:center;gap:15px;box-shadow:-10px 0 30px rgba(0,0,0,.45)">
+    <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:8.5px;letter-spacing:.2em;color:var(--fg-6)">CONTACT&nbsp;/&nbsp;01</div>
     <div style="width:16px;height:1px;background:rgba(255,255,255,.16)"></div>
-    <a class="nl" href="mailto:ekiess@unc.edu" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">EMAIL</a>
-    <a class="nl" href="https://github.com/luckyo7" target="_blank" rel="noopener" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">GITHUB</a>
-    <a class="nl" href="https://www.linkedin.com/in/evan-kiess/" target="_blank" rel="noopener" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:#c3c5c8;text-decoration:none">LINKEDIN</a>
-    <div style="width:7px;height:7px;border:1px solid var(--acc);transform:rotate(45deg)"></div>
-  </div>
+    <a class="nl" href="mailto:ekiess@unc.edu" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:var(--fg-2);text-decoration:none">EMAIL</a>
+    <a class="nl" href="https://github.com/luckyo7" target="_blank" rel="noopener" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:var(--fg-2);text-decoration:none">GITHUB</a>
+    <a class="nl" href="https://www.linkedin.com/in/evan-kiess/" target="_blank" rel="noopener" style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.1em;color:var(--fg-2);text-decoration:none">LINKEDIN</a>
+    <div style="width:7px;height:7px;border:1px solid var(--acc);transform:rotate(45deg)" aria-hidden="true"></div>
+  </nav>
 
-  <div style="width:100%;max-width:1240px;background:#0b0c0d;color:#e8e9ea;border:1px solid rgba(255,255,255,.13);position:relative;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:26px 26px;background-position:-1px -1px">
+  <div style="width:100%;max-width:1240px;background:var(--panel);color:var(--fg);border:1px solid var(--line);position:relative;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:26px 26px;background-position:-1px -1px">
 
-    <div style="position:absolute;top:14px;left:14px;width:11px;height:11px;background:radial-gradient(circle,transparent 3px,rgba(255,255,255,.4) 3px,rgba(255,255,255,.4) 4px,transparent 4px),linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/1px 100% no-repeat,linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/100% 1px no-repeat"></div>
-    <div style="position:absolute;top:14px;right:14px;width:11px;height:11px;background:radial-gradient(circle,transparent 3px,rgba(255,255,255,.4) 3px,rgba(255,255,255,.4) 4px,transparent 4px),linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/1px 100% no-repeat,linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/100% 1px no-repeat"></div>
+    <div aria-hidden="true" style="position:absolute;top:14px;left:14px;width:11px;height:11px;background:radial-gradient(circle,transparent 3px,rgba(255,255,255,.4) 3px,rgba(255,255,255,.4) 4px,transparent 4px),linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/1px 100% no-repeat,linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/100% 1px no-repeat"></div>
+    <div aria-hidden="true" style="position:absolute;top:14px;right:14px;width:11px;height:11px;background:radial-gradient(circle,transparent 3px,rgba(255,255,255,.4) 3px,rgba(255,255,255,.4) 4px,transparent 4px),linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/1px 100% no-repeat,linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)) center/100% 1px no-repeat"></div>
 
     <!-- top nav -->
-    <div class="topnav mpad" style="display:flex;justify-content:space-between;align-items:center;padding:16px 34px;border-bottom:1px solid rgba(255,255,255,.13);font-size:10.5px;letter-spacing:.14em;color:#83868a">
+    <nav class="topnav mpad" aria-label="Primary" style="display:flex;justify-content:space-between;align-items:center;padding:16px 34px;border-bottom:1px solid var(--line);font-size:10.5px;letter-spacing:.14em;color:var(--fg-5)">
       <div style="display:flex;align-items:baseline;gap:14px">
-        <a href="index.html" style="color:#e8e9ea;font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:.06em;text-decoration:none">EDK</a>
-        <span>PORTFOLIO / REV 2026.1</span>
+        <a href="index.html" style="color:var(--fg);font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:.06em;text-decoration:none">EDK</a>
+        <span>PORTFOLIO / REV 09.05.2026</span>
       </div>
       <div class="topnav-right" style="display:flex;align-items:center;gap:18px">
-        <a class="nl" href="index.html" style="text-decoration:none;color:#e8e9ea">INDEX</a>
-        <a class="nl" href="resume.pdf" style="text-decoration:none;color:#83868a">RESUME&nbsp;↗</a>
-        <a class="nl" href="resources.html" style="text-decoration:none;color:#83868a">RESOURCES</a>
+        <a class="nl" href="index.html" style="text-decoration:none;color:var(--fg)">INDEX</a>
+        <a class="nl" href="resume.pdf" style="text-decoration:none;color:var(--fg-5)">RESUME&nbsp;↗</a>
+        <a class="nl" href="resources.html" style="text-decoration:none;color:var(--fg-5)">RESOURCES</a>
         <span style="width:1px;height:14px;background:rgba(255,255,255,.22)"></span>
         <div style="display:flex;gap:18px;font-size:10.5px;letter-spacing:.14em;white-space:nowrap">
-          <a class="nl" href="mousevr.html" style="text-decoration:none;color:#a9abae">MouseVR</a>
-          <a class="nl" href="robotic-putter.html" style="text-decoration:none;color:#a9abae">Robotic Putter</a>
+          <a class="nl" href="mousevr.html" style="text-decoration:none;color:var(--fg-3)">MouseVR</a>
+          <a class="nl" href="robotic-putter.html" style="text-decoration:none;color:var(--fg-3)">Robotic Putter</a>
         </div>
       </div>
-    </div>
+    </nav>
 
     <!-- main -->
-    <div style="min-width:0">
+    <main id="main" style="min-width:0">
       <!-- hero -->
-      <div id="about" style="padding:46px 40px 40px;border-bottom:1px solid rgba(255,255,255,.13);position:relative;scroll-margin-top:70px">
-        <div style="display:flex;align-items:center;gap:8px;color:#6f7276;font-size:10px;letter-spacing:.12em;margin-bottom:22px">
-          <span>├</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,#4a4d50 0 6px,transparent 6px 10px)"></div><span>FOURTH-YEAR · BIOMEDICAL ENGINEERING</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,#4a4d50 0 6px,transparent 6px 10px)"></div><span>┤</span>
+      <div id="about" style="padding:46px 40px 40px;border-bottom:1px solid var(--line);position:relative;scroll-margin-top:70px">
+        <div style="display:flex;align-items:center;gap:8px;color:var(--fg-6);font-size:10px;letter-spacing:.12em;margin-bottom:22px">
+          <span>├</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--rule) 0 6px,transparent 6px 10px)"></div><span>FOURTH-YEAR · BIOMEDICAL ENGINEERING</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--rule) 0 6px,transparent 6px 10px)"></div><span>┤</span>
         </div>
         <div class="hero-row" style="display:flex;align-items:center;gap:32px">
-          <h1 class="hero-name" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:92px;line-height:.92;letter-spacing:-.02em;margin:0;color:#f4f4f5">EVAN<br>KIESS</h1>
+          <h1 class="hero-name" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:92px;line-height:.92;letter-spacing:-.02em;margin:0;color:var(--ink)">EVAN<br>KIESS</h1>
           <div style="flex:none">
-            <div style="position:relative;width:140px;aspect-ratio:4/5;border:1px solid rgba(255,255,255,.18);background:#0e0f11">
+            <div style="position:relative;width:140px;aspect-ratio:4/5;border:1px solid rgba(255,255,255,.18);background:var(--frame)">
               <span style="position:absolute;width:9px;height:9px;border:1px solid var(--acc);top:-1px;left:-1px;border-right:0;border-bottom:0"></span>
               <span style="position:absolute;width:9px;height:9px;border:1px solid var(--acc);top:-1px;right:-1px;border-left:0;border-bottom:0"></span>
               <span style="position:absolute;width:9px;height:9px;border:1px solid var(--acc);bottom:-1px;left:-1px;border-right:0;border-top:0"></span>
               <span style="position:absolute;width:9px;height:9px;border:1px solid var(--acc);bottom:-1px;right:-1px;border-left:0;border-top:0"></span>
-              <image-slot id="headshot" shape="rect" fit="cover" placeholder="headshot"></image-slot>
+              <img src="assets/headshot.webp" alt="Evan Kiess" width="204" height="255" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
             </div>
-            <div style="width:140px;font-size:9px;letter-spacing:.16em;color:#6f7276;margin-top:8px;display:flex;justify-content:space-between"><span>FIG. 01</span><span>E. KIESS</span></div>
+            <div style="width:140px;font-size:9px;letter-spacing:.16em;color:var(--fg-6);margin-top:8px;display:flex;justify-content:space-between"><span>FIG. 01</span><span>E. KIESS</span></div>
           </div>
         </div>
         <div class="hero-meta" style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:26px;gap:40px">
-          <p style="max-width:520px;margin:0;font-size:13px;line-height:1.85;color:#a9abae">Passionate designer, maker, and engineer studying biomedical engineering at <b style="color:#e8e9ea">UNC</b> and <b style="color:#e8e9ea">NC&nbsp;State</b>. Technical interests include embedded systems, mechanical design, control systems, and <b style="color:#e8e9ea">surgical robotics</b>. Hobbies include sailing, guitar, and woodworking.</p>
-          <div class="coords" style="text-align:right;font-size:10px;letter-spacing:.1em;color:#6f7276;line-height:2">
-            <div>LAT 35.9132° N</div><div>LON 79.0558° W</div><div style="color:#a9abae">CHAPEL HILL, NC</div>
+          <p style="max-width:520px;margin:0;font-size:13px;line-height:1.85;color:var(--fg-3)">Passionate designer, maker, and engineer studying biomedical engineering at <b style="color:var(--fg)">UNC</b> and <b style="color:var(--fg)">NC&nbsp;State</b>. Technical interests include embedded systems, mechanical design, control systems, and <b style="color:var(--fg)">surgical robotics</b>. Hobbies include sailing, guitar, and woodworking.</p>
+          <div class="coords" style="text-align:right;font-size:10px;letter-spacing:.1em;color:var(--fg-6);line-height:2">
+            <div style="color:var(--fg-3)">CHAPEL HILL, NC</div>
           </div>
         </div>
       </div>
 
       <!-- projects header -->
-      <div id="work" style="display:flex;justify-content:space-between;align-items:baseline;padding:22px 40px 16px;font-size:10.5px;letter-spacing:.14em;color:#83868a;scroll-margin-top:70px">
-        <span style="color:#e8e9ea">SELECTED WORK</span><span>08 ITEMS</span>
+      <div id="work" style="display:flex;justify-content:space-between;align-items:baseline;padding:22px 40px 16px;font-size:10.5px;letter-spacing:.14em;color:var(--fg-5);scroll-margin-top:70px">
+        <h2 style="margin:0;font-weight:inherit;font-size:inherit;letter-spacing:inherit;color:var(--fg);display:inline">SELECTED WORK</h2><span>08 ITEMS</span>
       </div>
 
       <!-- projects grid -->
-      <div class="proj-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid rgba(255,255,255,.13)">
-          <a href="mousevr.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+      <div class="proj-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid var(--line)">
+          <a href="mousevr.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:var(--fg-6);margin-bottom:14px">
               <span class="pj-num" style="transition:color .2s">P-01</span>
               <span style="display:flex;align-items:center;gap:6px"><span style="width:5px;height:5px;background:var(--acc);border-radius:50%"></span>ONGOING · RESEARCH</span>
             </div>
-            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid var(--line-frame);transition:border-color .25s;background:var(--frame);overflow:hidden">
               <div class="pj-img" style="position:absolute;inset:0">
-                <image-slot id="a-mousevr" shape="rect" fit="contain" placeholder="mousevr photo"></image-slot>
+                <img src="assets/card-mousevr.webp" alt="CAD render of the MouseVR goggle assembly" width="742" height="645" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block">
               </div>
               <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
-              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 01</div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:var(--fg-6);background:rgba(11,12,13,.75);padding:2px 5px">DWG 01</div>
             </div>
-            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">MouseVR</h3>
-            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">Development of MRI-compatible virtual reality goggles for fMRI in awake mice.</p>
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:var(--ink-2)">MouseVR</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:var(--fg-4)">Development of MRI-compatible virtual reality goggles for fMRI in awake mice.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:var(--fg-6);padding-top:10px;border-top:1px dashed var(--line-dash);margin-top:auto">
               <span>IN PROGRESS</span>
               <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
             </div>
           </a>
-          <a href="robotic-putter.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+          <a href="robotic-putter.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:var(--fg-6);margin-bottom:14px">
               <span class="pj-num" style="transition:color .2s">P-02</span>
               <span style="display:flex;align-items:center;gap:6px"><span style="width:5px;height:5px;background:var(--acc);border-radius:50%"></span>ONGOING · ROBOTICS</span>
             </div>
-            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid var(--line-frame);transition:border-color .25s;background:var(--frame);overflow:hidden">
               <div class="pj-img" style="position:absolute;inset:0">
-                <image-slot id="a-robputter" shape="rect" fit="contain" placeholder="robotic putter photo"></image-slot>
+                <img src="assets/card-robotic-putter.webp" alt="CAD render of the robotic putter" width="742" height="556" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block">
               </div>
               <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
-              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 02</div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:var(--fg-6);background:rgba(11,12,13,.75);padding:2px 5px">DWG 02</div>
             </div>
-            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">Robotic Putter</h3>
-            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">In the workshop now — a full writeup is on the way.</p>
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:var(--ink-2)">Robotic Putter</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:var(--fg-4)">In the workshop now. A full writeup is on the way.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:var(--fg-6);padding-top:10px;border-top:1px dashed var(--line-dash);margin-top:auto">
               <span>IN PROGRESS</span>
               <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
             </div>
           </a>
-          <a href="press.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+          <a href="press.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:var(--fg-6);margin-bottom:14px">
               <span class="pj-num" style="transition:color .2s">P-03</span>
               <span style="display:flex;align-items:center;gap:6px">MECHANICAL</span>
             </div>
-            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid var(--line-frame);transition:border-color .25s;background:var(--frame);overflow:hidden">
               <div class="pj-img" style="position:absolute;inset:0">
-                <image-slot id="a05" shape="rect" fit="contain" placeholder="press photo"></image-slot>
+                <img src="assets/card-press.webp" alt="The finished modular vertical press on a workbench" width="742" height="556" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block">
               </div>
               <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
-              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 03</div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:var(--fg-6);background:rgba(11,12,13,.75);padding:2px 5px">DWG 03</div>
             </div>
-            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">Modular Vertical Press</h3>
-            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">A modular benchtop press for heat-set threaded inserts, built entirely from leftover project materials.</p>
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:var(--ink-2)">Modular Vertical Press</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:var(--fg-4)">A modular benchtop press for heat-set threaded inserts, built entirely from leftover project materials.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:var(--fg-6);padding-top:10px;border-top:1px dashed var(--line-dash);margin-top:auto">
               <span>FUSION 360 · FDM</span>
               <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
             </div>
           </a>
-          <a href="tiny-tuner.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+          <a href="tiny-tuner.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:var(--fg-6);margin-bottom:14px">
               <span class="pj-num" style="transition:color .2s">P-04</span>
               <span style="display:flex;align-items:center;gap:6px">EMBEDDED</span>
             </div>
-            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid var(--line-frame);transition:border-color .25s;background:var(--frame);overflow:hidden">
               <div class="pj-img" style="position:absolute;inset:0">
-                <image-slot id="a01" shape="rect" fit="contain" placeholder="tiny tuner photo"></image-slot>
+                <img src="assets/card-tiny-tuner.webp" alt="The Tiny Tuner prototype wired on a breadboard with its OLED display" width="742" height="556" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block">
               </div>
               <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
-              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 04</div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:var(--fg-6);background:rgba(11,12,13,.75);padding:2px 5px">DWG 04</div>
             </div>
-            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">Tiny Tuner</h3>
-            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">A compact guitar tuner built with an ESP32, MEMS microphone, and OLED display.</p>
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
-              <span>ESP32 · MEMS · OLED</span>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:var(--ink-2)">Tiny Tuner</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:var(--fg-4)">A compact guitar tuner built with an ESP32, MEMS microphone, and OLED display.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:var(--fg-6);padding-top:10px;border-top:1px dashed var(--line-dash);margin-top:auto">
+              <span>ESP32 / MEMS / OLED</span>
               <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
             </div>
           </a>
-          <a href="basketbot.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+          <a href="basketbot.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:var(--fg-6);margin-bottom:14px">
               <span class="pj-num" style="transition:color .2s">P-05</span>
               <span style="display:flex;align-items:center;gap:6px">ROBOTICS</span>
             </div>
-            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid var(--line-frame);transition:border-color .25s;background:var(--frame);overflow:hidden">
               <div class="pj-img" style="position:absolute;inset:0">
-                <image-slot id="a02" shape="rect" fit="contain" placeholder="basketbot photo"></image-slot>
+                <img src="assets/card-basketbot.webp" alt="CAD render of the BasketBot flywheel launcher" width="742" height="557" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block">
               </div>
               <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
-              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 05</div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:var(--fg-6);background:rgba(11,12,13,.75);padding:2px 5px">DWG 05</div>
             </div>
-            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">BasketBot</h3>
-            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">A basketball-shooting robot built with Arduino and computer vision.</p>
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:var(--ink-2)">BasketBot</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:var(--fg-4)">A basketball-shooting robot built with Arduino and computer vision.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:var(--fg-6);padding-top:10px;border-top:1px dashed var(--line-dash);margin-top:auto">
               <span>ARDUINO · OPENCV</span>
               <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
             </div>
           </a>
-          <a href="telecaster.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+          <a href="telecaster.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:var(--fg-6);margin-bottom:14px">
               <span class="pj-num" style="transition:color .2s">P-06</span>
               <span style="display:flex;align-items:center;gap:6px">FABRICATION</span>
             </div>
-            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid var(--line-frame);transition:border-color .25s;background:var(--frame);overflow:hidden">
               <div class="pj-img" style="position:absolute;inset:0">
-                <image-slot id="a03" shape="rect" fit="contain" placeholder="telecaster photo"></image-slot>
+                <img src="assets/card-telecaster.webp" alt="The finished ’72 Telecaster Deluxe replica" width="742" height="557" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block">
               </div>
               <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
-              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 06</div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:var(--fg-6);background:rgba(11,12,13,.75);padding:2px 5px">DWG 06</div>
             </div>
-            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">’72 Telecaster Deluxe</h3>
-            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">A from-scratch electric guitar inspired by the 1972 Fender Telecaster Deluxe.</p>
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
-              <span>ROUTER · HANDTOOLS · FDM</span>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:var(--ink-2)">’72 Telecaster Deluxe</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:var(--fg-4)">A from-scratch electric guitar inspired by the 1972 Fender Telecaster Deluxe.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:var(--fg-6);padding-top:10px;border-top:1px dashed var(--line-dash);margin-top:auto">
+              <span>ROUTER / HANDTOOLS / FDM</span>
               <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
             </div>
           </a>
-          <a href="guitar-stand.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+          <a href="guitar-stand.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:var(--fg-6);margin-bottom:14px">
               <span class="pj-num" style="transition:color .2s">P-07</span>
               <span style="display:flex;align-items:center;gap:6px">FABRICATION</span>
             </div>
-            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid var(--line-frame);transition:border-color .25s;background:var(--frame);overflow:hidden">
               <div class="pj-img" style="position:absolute;inset:0">
-                <image-slot id="a04" shape="rect" fit="contain" placeholder="guitar stand photo"></image-slot>
+                <img src="assets/card-guitar-stand.webp" alt="An acoustic guitar resting in the laser-cut wooden stand" width="742" height="624" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block">
               </div>
               <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
-              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 07</div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:var(--fg-6);background:rgba(11,12,13,.75);padding:2px 5px">DWG 07</div>
             </div>
-            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">Guitar Stand</h3>
-            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">A laser-cut poplar plywood stand in dark walnut, built to hold acoustic and electric guitars.</p>
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:var(--ink-2)">Guitar Stand</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:var(--fg-4)">A laser-cut poplar plywood stand in dark walnut, built to hold acoustic and electric guitars.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:var(--fg-6);padding-top:10px;border-top:1px dashed var(--line-dash);margin-top:auto">
               <span>LASER · PLYWOOD</span>
               <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
             </div>
           </a>
-          <a href="mac-dock.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);position:relative">
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:#6f7276;margin-bottom:14px">
+          <a href="mac-dock.html" class="pj" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;color:var(--fg-6);margin-bottom:14px">
               <span class="pj-num" style="transition:color .2s">P-08</span>
               <span style="display:flex;align-items:center;gap:6px">DESIGN</span>
             </div>
-            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.15);transition:border-color .25s;background:#0e0f11;overflow:hidden">
+            <div class="pj-frame" style="position:relative;aspect-ratio:4/3;border:1px solid var(--line-frame);transition:border-color .25s;background:var(--frame);overflow:hidden">
               <div class="pj-img" style="position:absolute;inset:0">
-                <image-slot id="a06" shape="rect" fit="contain" placeholder="dock photo"></image-slot>
+                <img src="assets/card-mac-dock.webp" alt="A closed MacBook Air seated in the hardwood dock" width="742" height="557" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block">
               </div>
               <div class="pj-ov"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span><span class="tag">OPEN</span></div>
-              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:#6f7276;background:rgba(11,12,13,.75);padding:2px 5px">DWG 08</div>
+              <div style="position:absolute;bottom:6px;left:6px;z-index:3;font-size:9px;letter-spacing:.1em;color:var(--fg-6);background:rgba(11,12,13,.75);padding:2px 5px">DWG 08</div>
             </div>
-            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:#f0f0f1">MacBook Air Dock</h3>
-            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#8b8e92">A sleek hardwood dock for the M2 MacBook Air with clean cable management.</p>
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:#6f7276;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);margin-top:auto">
-              <span>ROUTER · HANDTOOLS · PLYWOOD</span>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;margin:14px 0 6px;color:var(--ink-2)">MacBook Air Dock</h3>
+            <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:var(--fg-4)">A sleek hardwood dock for the M2 MacBook Air with clean cable management.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:.08em;color:var(--fg-6);padding-top:10px;border-top:1px dashed var(--line-dash);margin-top:auto">
+              <span>ROUTER / HANDTOOLS / PLYWOOD</span>
               <span class="pj-go" style="opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--acc)">OPEN →</span>
             </div>
           </a>
       </div>
 
+    </main>
+
       <!-- footer -->
-      <div style="border-top:1px solid rgba(255,255,255,.13);overflow:hidden">
-        <div class="footer-row mpad" style="display:flex;justify-content:space-between;align-items:center;padding:22px 40px;font-size:11px;letter-spacing:.08em;color:#83868a">
-          <span style="color:#e8e9ea">© 2026 EVAN KIESS</span>
+      <footer style="border-top:1px solid var(--line);overflow:hidden">
+        <div class="footer-row mpad" style="display:flex;justify-content:space-between;align-items:center;padding:22px 40px;font-size:11px;letter-spacing:.08em;color:var(--fg-5)">
+          <span style="color:var(--fg)">© 2026 EVAN KIESS</span>
           <div style="display:flex;gap:24px">
-            <a class="nl" href="mailto:ekiess@unc.edu" style="text-decoration:none;color:#83868a">EMAIL</a>
-            <a class="nl" href="https://github.com/luckyo7" target="_blank" rel="noopener" style="text-decoration:none;color:#83868a">GITHUB</a>
-            <a class="nl" href="https://www.linkedin.com/in/evan-kiess/" target="_blank" rel="noopener" style="text-decoration:none;color:#83868a">LINKEDIN</a>
+            <a class="nl" href="mailto:ekiess@unc.edu" style="text-decoration:none;color:var(--fg-5)">EMAIL</a>
+            <a class="nl" href="https://github.com/luckyo7" target="_blank" rel="noopener" style="text-decoration:none;color:var(--fg-5)">GITHUB</a>
+            <a class="nl" href="https://www.linkedin.com/in/evan-kiess/" target="_blank" rel="noopener" style="text-decoration:none;color:var(--fg-5)">LINKEDIN</a>
           </div>
           <a href="#" style="text-decoration:none;color:var(--acc)">BACK TO TOP&nbsp;↑</a>
         </div>
-        <div class="wordmark" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:150px;line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.14);padding:0 0 0 34px;margin:4px 0 -26px;white-space:nowrap;pointer-events:none">EVAN KIESS<span style="-webkit-text-stroke:1px var(--acc)">.</span></div>
-      </div>
-    </div>
+        <div class="wordmark" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:150px;line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px var(--line-dash);padding:0 0 0 34px;margin:4px 0 -26px;white-space:nowrap;pointer-events:none">EVAN KIESS<span style="-webkit-text-stroke:1px var(--acc)">.</span></div>
+      </footer>
   </div>
 </div>
-<script src="image-slot.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Evan Kiess","url":"https://ekiess.com/",
+"jobTitle":"Biomedical engineering student","email":"mailto:ekiess@unc.edu",
+"image":"https://ekiess.com/assets/headshot.webp",
+"alumniOf":[{"@type":"CollegeOrUniversity","name":"University of North Carolina at Chapel Hill"},
+{"@type":"CollegeOrUniversity","name":"North Carolina State University"}],
+"address":{"@type":"PostalAddress","addressLocality":"Chapel Hill","addressRegion":"NC","addressCountry":"US"},
+"knowsAbout":["Embedded systems","Mechanical design","Control systems","Surgical robotics","Biomedical engineering"],
+"sameAs":["https://github.com/luckyo7","https://www.linkedin.com/in/evan-kiess/"]}
+</script>
 </body>
 </html>
