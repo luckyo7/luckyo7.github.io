@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Robotic Putter / Evan Kiess</title>
-<meta name="description" content="An in-progress robotics build: a robotic putter. Full writeup with photos and specs coming soon.">
+<meta name="description" content="A robotic putter that rejects hand tremor, making putting accessible to golfers with conditions like Parkinson&#39;s and MS. CZERVIK MK 0 is the proof-of-concept.">
 <link rel="canonical" href="https://ekiess.com/robotic-putter.html">
 <meta name="theme-color" content="#0b0c0d">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -12,14 +12,14 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Evan Kiess">
 <meta property="og:title" content="Robotic Putter / Evan Kiess">
-<meta property="og:description" content="An in-progress robotics build: a robotic putter. Full writeup with photos and specs coming soon.">
+<meta property="og:description" content="A robotic putter that rejects hand tremor, making putting accessible to golfers with conditions like Parkinson&#39;s and MS. CZERVIK MK 0 is the proof-of-concept.">
 <meta property="og:url" content="https://ekiess.com/robotic-putter.html">
-<meta property="og:image" content="https://ekiess.com/assets/mouse_vr.png">
-<meta property="og:image:alt" content="The MouseVR prototype: 3D-printed MRI-compatible goggles for awake-mouse fMRI">
+<meta property="og:image" content="https://ekiess.com/assets/robotic-putter-hero.webp">
+<meta property="og:image:alt" content="CAD render of the robotic putter: a carbon-fiber shaft with a geared head assembly and a grip-end electronics module">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Robotic Putter / Evan Kiess">
-<meta name="twitter:description" content="An in-progress robotics build: a robotic putter. Full writeup with photos and specs coming soon.">
-<meta name="twitter:image" content="https://ekiess.com/assets/mouse_vr.png">
+<meta name="twitter:description" content="A robotic putter that rejects hand tremor, making putting accessible to golfers with conditions like Parkinson&#39;s and MS. CZERVIK MK 0 is the proof-of-concept.">
+<meta name="twitter:image" content="https://ekiess.com/assets/robotic-putter-hero.webp">
 <link rel="preload" href="assets/fonts/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/space-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="fonts.css">
@@ -48,7 +48,7 @@
     <nav class="topnav mpad" aria-label="Primary" style="display:flex;justify-content:space-between;align-items:center;padding:16px 34px;border-bottom:1px solid var(--line);font-size:10.5px;letter-spacing:.14em;color:var(--fg-5)">
       <div style="display:flex;align-items:baseline;gap:14px">
         <a href="index.html" style="color:var(--fg);font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:.06em;text-decoration:none">EDK</a>
-        <span>PORTFOLIO / REV 09.05.2026</span>
+        <span>PORTFOLIO / REV 09.2026</span>
       </div>
       <div class="topnav-right" style="display:flex;align-items:center;gap:18px">
         <a class="nl" href="index.html" style="text-decoration:none;color:var(--fg-5)">INDEX</a>
@@ -70,24 +70,39 @@
         <span>2026</span>
       </div>
 
-      <!-- hero -->
-      <div class="mpad" style="padding:44px 40px 34px;border-bottom:1px solid var(--line)">
-        <div style="display:flex;align-items:center;gap:8px;color:var(--fg-6);font-size:10px;letter-spacing:.12em;margin-bottom:22px">
-          <span>├</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--rule) 0 6px,transparent 6px 10px)"></div><span>ONGOING · ROBOTICS</span>
+      <!-- hero: title + bleeding render -->
+      <div class="overview-grid" style="display:grid;grid-template-columns:1.05fr .95fr;border-bottom:1px solid var(--line)">
+        <div class="mpad" style="padding:44px 34px 34px 40px">
+          <div style="display:flex;align-items:center;gap:8px;color:var(--fg-6);font-size:10px;letter-spacing:.12em;margin-bottom:22px">
+            <span>├</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--rule) 0 6px,transparent 6px 10px)"></div><span>ONGOING · ROBOTICS</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--rule) 0 6px,transparent 6px 10px)"></div><span>┤</span>
+          </div>
+          <h1 class="d-title" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:60px;line-height:.96;letter-spacing:-.02em;margin:0;color:var(--ink)">Robotic Putter</h1>
+          <p style="margin:22px 0 0;font-size:14px;line-height:1.8;color:var(--fg-3)">The <b>CZERVIK MK 0</b> is a prototype robotic putter designed to answer the simple question: can golf be made accessible to everyone? Initial work focused primarily on tremor rejection, targeting golfers with conditions like Parkinson’s and MS that may preferentially disturb putting.<br><br>However, the MK 0 is only the beginning. The real dream is more than just a putter that anyone can use. It’s a world where engineering is used to make sports accessible to everyone.</p>
+          <div style="display:flex;gap:10px;margin-top:26px;flex-wrap:wrap">
+            <span style="font-size:9.5px;letter-spacing:.14em;color:var(--fg-2);border:1px solid rgba(255,255,255,.18);padding:6px 10px">FUSION</span>
+            <span style="font-size:9.5px;letter-spacing:.14em;color:var(--fg-2);border:1px solid rgba(255,255,255,.18);padding:6px 10px">3D PRINTED</span>
+            <span style="font-size:9.5px;letter-spacing:.14em;color:var(--fg-2);border:1px solid rgba(255,255,255,.18);padding:6px 10px">CARBON FIBER</span>
+            <span style="font-size:9.5px;letter-spacing:.14em;color:var(--fg-2);border:1px solid rgba(255,255,255,.18);padding:6px 10px">WORM GEARING</span>
+            <span style="font-size:9.5px;letter-spacing:.14em;color:var(--fg-2);border:1px solid rgba(255,255,255,.18);padding:6px 10px">FOC + IMU</span>
+          </div>
         </div>
-        <h1 class="d-title" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:66px;line-height:.96;letter-spacing:-.02em;margin:0;color:var(--ink)">Robotic Putter</h1>
-        <p style="max-width:640px;margin:24px 0 0;font-size:14px;line-height:1.8;color:var(--fg-3)">An ongoing build. I’m still designing and documenting it. A full writeup with photos and specs will land here soon.</p>
+        <div style="border-left:1px solid var(--line);position:relative;min-height:340px;background:var(--frame);overflow:hidden">
+          <div style="position:absolute;inset:0">
+            <img src="assets/robotic-putter-hero.webp" alt="CAD render of the robotic putter: a carbon-fiber shaft running from a geared head assembly up to an electronics module at the grip" width="886" height="664" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:cover">
+          </div>
+          <div class="cap">FIG 01 / CZERVIK MK 0</div>
+        </div>
       </div>
 
       <!-- spec bar -->
       <div class="spec-bar" style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)">
           <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1)">
             <div style="font-size:8.5px;letter-spacing:.14em;color:var(--fg-6)">DISCIPLINE</div>
-            <div style="font-size:11.5px;color:var(--fg);margin-top:5px;line-height:1.5">Robotics</div>
+            <div style="font-size:11.5px;color:var(--fg);margin-top:5px;line-height:1.5">Robotics, controls, mechanical design</div>
           </div>
           <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1)">
-            <div style="font-size:8.5px;letter-spacing:.14em;color:var(--fg-6)">TOOLS</div>
-            <div style="font-size:11.5px;color:var(--fg);margin-top:5px;line-height:1.5">TBD</div>
+            <div style="font-size:8.5px;letter-spacing:.14em;color:var(--fg-6)">BUILD</div>
+            <div style="font-size:11.5px;color:var(--fg);margin-top:5px;line-height:1.5">Czervik MK 0 · proof-of-concept</div>
           </div>
           <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1)">
             <div style="font-size:8.5px;letter-spacing:.14em;color:var(--fg-6)">ROLE</div>
@@ -95,26 +110,152 @@
           </div>
           <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1)">
             <div style="font-size:8.5px;letter-spacing:.14em;color:var(--fg-6)">STATUS</div>
-            <div style="font-size:11.5px;color:var(--fg);margin-top:5px;line-height:1.5">Ongoing</div>
+            <div style="font-size:11.5px;color:var(--fg);margin-top:5px;line-height:1.5">MK 0 proven · MK 1 in progress</div>
           </div>
       </div>
 
-      <!-- hero image -->
-      <div class="mpad" style="padding:40px 40px 0">
-        <div style="position:relative;aspect-ratio:16/9;border:1px solid var(--line-frame);background:var(--frame);overflow:hidden">
-          <div style="position:absolute;inset:0">
-            <img src="assets/robotic-putter-hero.webp" alt="CAD render of the robotic putter" width="886" height="664" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block">
+      <!-- chapter A: contents rail + narrative -->
+      <div class="overview-grid" style="display:grid;grid-template-columns:220px 1fr;border-bottom:1px solid var(--line)">
+        <div class="mpad" style="border-right:1px solid var(--line);padding:34px 24px">
+          <div class="rail" style="display:flex;flex-direction:column;gap:14px;font-size:10px;letter-spacing:.12em;color:var(--fg-6)">
+            <div style="color:var(--fg-5)">SUMMARY</div>
+            <a class="nl" href="#s01" style="text-decoration:none;color:var(--fg-2)">01 &nbsp;THE GOAL</a>
+            <a class="nl" href="#s02" style="text-decoration:none;color:var(--fg-2)">02 &nbsp;THE PROTOTYPE</a>
+            <a class="nl" href="#s03" style="text-decoration:none;color:var(--fg-2)">03 &nbsp;THE NEXT STEPS</a>
+            <div style="height:1px;background:repeating-linear-gradient(90deg,var(--rule) 0 4px,transparent 4px 8px);margin:4px 0"></div>
+            <a class="nl" href="#mk0" style="text-decoration:none;color:var(--fg-5)">04 &nbsp;CZERVIK MK 0</a>
           </div>
-          <div style="position:absolute;bottom:8px;left:8px;font-size:9px;letter-spacing:.1em;color:var(--fg-4);background:rgba(11,12,13,.75);padding:3px 7px">FIG 01 / Robotic Putter</div>
+        </div>
+        <div>
+          <div id="s01" class="sec mpad rv" style="padding:38px 40px;border-bottom:1px solid var(--line)">
+            <h2 class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin:0 0 14px;font-weight:400">01 / THE GOAL</h2>
+            <p style="margin:0;max-width:720px;font-family:'Space Grotesk',sans-serif;font-size:24px;line-height:1.4;color:var(--ink-2);text-wrap:pretty">Make putting accessible to golfers with <b>tremor-inducing</b> conditions like Parkinson’s and MS.</p>
+          </div>
+
+          <div id="s02" class="sec mpad rv" style="padding:32px 40px;border-bottom:1px solid var(--line)">
+            <h2 class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin:0 0 14px;font-weight:400">02 / THE PROTOTYPE</h2>
+            <p style="margin:0;max-width:700px;font-size:13.5px;line-height:1.9;color:var(--fg-2)">Tremor rejection through closed-loop control of the putter head using an FOC-driven brushless gimbal motor and 6&nbsp;DoF inertial measurement unit.</p>
+          </div>
+
+          <div id="s03" class="sec mpad rv" style="padding:32px 40px 40px">
+            <h2 class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin:0 0 14px;font-weight:400">03 / THE NEXT STEPS</h2>
+            <p style="margin:0;max-width:700px;font-size:13.5px;line-height:1.9;color:var(--fg-2)">The <b>CZERVIK MK 0</b> has demonstrated the technical feasibility of tremor rejection in golf putters. Work on the next prototype (CZERVIK MK 1) is ongoing and will focus primarily on user experience, controls, and design for manufacture and assembly (<b>DFMA</b>).</p>
+          </div>
         </div>
       </div>
 
-      <!-- overview -->
-      <div class="overview-grid mpad" style="display:grid;grid-template-columns:180px 1fr;gap:30px;padding:40px 40px 34px">
-        <h2 style="font-size:10.5px;font-weight:400;letter-spacing:.14em;color:var(--fg-6);padding-top:4px;margin:0">OVERVIEW</h2>
-        <div style="max-width:640px;display:flex;flex-direction:column;gap:18px">
-          <p style="margin:0;font-size:13.5px;line-height:1.9;color:var(--fg-2)">The Robotic Putter is currently in progress. Check back soon for the full story: the mechanism, the controls, and the results.</p>
-          <p style="margin:0;font-size:13.5px;line-height:1.9;color:var(--fg-2)">Want the short version before then? Reach out with the contact tab and I’m happy to talk through it.</p>
+      <!-- chapter plate: full bleed break -->
+      <div id="mk0" style="position:relative;border-bottom:1px solid var(--line);background:var(--panel-2);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:13px 13px;scroll-margin-top:20px">
+        <div aria-hidden="true" style="position:absolute;top:12px;left:12px;width:9px;height:9px;border:1px solid var(--acc);border-right:0;border-bottom:0"></div>
+        <div aria-hidden="true" style="position:absolute;bottom:12px;right:12px;width:9px;height:9px;border:1px solid var(--acc);border-left:0;border-top:0"></div>
+        <div class="mpad" style="padding:52px 40px 46px">
+          <div style="display:flex;align-items:center;gap:8px;color:var(--fg-6);font-size:10px;letter-spacing:.12em;margin-bottom:24px">
+            <span>├</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--rule) 0 6px,transparent 6px 10px)"></div><span>HARDWARE / FIRST ARTICLE</span><div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--rule) 0 6px,transparent 6px 10px)"></div><span>┤</span>
+          </div>
+          <div class="hero-meta" style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px">
+            <h2 class="chap-title" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:62px;line-height:.96;letter-spacing:-.02em;margin:0;color:var(--ink)">CZERVIK<br>MK&nbsp;<span style="color:var(--acc)">0</span></h2>
+            <div class="coords" style="text-align:right;font-size:10px;letter-spacing:.1em;color:var(--fg-6);line-height:2.1;white-space:nowrap">
+              <div>REVISION&nbsp;&nbsp;<span style="color:var(--fg-3)">00</span></div>
+              <div>STATE&nbsp;&nbsp;<span style="color:var(--fg-3)">IN FABRICATION</span></div>
+              <div>ISSUED&nbsp;&nbsp;<span style="color:var(--fg-3)">2026</span></div>
+            </div>
+          </div>
+          <p style="max-width:640px;margin:24px 0 0;font-size:13.5px;line-height:1.9;color:var(--fg-3)">The first step. 3D printed putter head, prototype board, and a cheap motor. A technical proof-of-concept waiting to be transformed into a finished product.</p>
+        </div>
+      </div>
+
+      <!-- chapter B: hardware rail + subsections -->
+      <div class="overview-grid" style="display:grid;grid-template-columns:220px 1fr">
+        <div class="mpad" style="border-right:1px solid var(--line);padding:34px 24px">
+          <div class="rail" style="display:flex;flex-direction:column;gap:14px;font-size:10px;letter-spacing:.12em;color:var(--fg-6)">
+            <div style="color:var(--fg-5)">MK 0 / SYSTEMS</div>
+            <a class="nl" href="#s04" style="text-decoration:none;color:var(--fg-2)">04 &nbsp;CUSTOM DRIVETRAIN</a>
+            <a class="nl" href="#s05" style="text-decoration:none;color:var(--fg-2)">05 &nbsp;CARBON FIBER SHAFT</a>
+            <a class="nl" href="#s06" style="text-decoration:none;color:var(--fg-2)">06 &nbsp;PID-DRIVEN CONTROLS</a>
+            <div style="height:1px;background:repeating-linear-gradient(90deg,var(--rule) 0 4px,transparent 4px 8px);margin:4px 0"></div>
+            <a class="nl" href="#main" style="text-decoration:none;color:var(--fg-5)">↑ &nbsp;TOP OF SHEET</a>
+          </div>
+        </div>
+        <div>
+
+          <div id="s04" class="sec mpad rv" style="padding:38px 40px;border-bottom:1px solid var(--line);scroll-margin-top:20px">
+            <h3 class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin:0 0 20px;font-weight:400">04 / CUSTOM DRIVETRAIN</h3>
+            <div class="feat-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start">
+              <div style="display:flex;flex-direction:column;gap:18px">
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="color:var(--acc);font-size:12px">◆</span>
+                <p style="margin:0;max-width:100%;font-size:13px;line-height:1.8;color:var(--fg-2)">Worm gear and beveled rack stages allow non-backdriveable torque transfer between non-parallel shaft and head axes.</p>
+              </div>
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="color:var(--acc);font-size:12px">◆</span>
+                <p style="margin:0;max-width:100%;font-size:13px;line-height:1.8;color:var(--fg-2)">15:1 reduction trades maximum angular acceleration for an increased position resolution.</p>
+              </div>
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="color:var(--acc);font-size:12px">◆</span>
+                <p style="margin:0;max-width:100%;font-size:13px;line-height:1.8;color:var(--fg-2)">Motor located in handle to minimize footprint. An inner hardened stainless steel shaft runs the length of the club.</p>
+              </div>
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="color:var(--acc);font-size:12px">◆</span>
+                <p style="margin:0;max-width:100%;font-size:13px;line-height:1.8;color:var(--fg-2)">Anti-backlash torsion springs take up mechanical play, increasing the phase margin of the system.</p>
+              </div>
+              </div>
+              <div style="background:var(--panel-2);border:1px solid var(--line);padding:10px">
+                <div class="fig" style="aspect-ratio:4/3">
+                  <img src="assets/robotic-putter-f1.webp" alt="The MK 0 head assembly: a brass worm meshing with a 3D printed beveled rack that pivots the putter blade" width="1200" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+                  <div class="cap">FIG 02 / HEAD ASSEMBLY</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="s05" class="sec mpad rv" style="padding:34px 40px;border-bottom:1px solid var(--line);scroll-margin-top:20px">
+            <h3 class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin:0 0 20px;font-weight:400">05 / CARBON FIBER SHAFT</h3>
+            <div class="feat-grid" style="display:grid;grid-template-columns:1fr .72fr;gap:34px;align-items:center">
+              <div style="display:flex;flex-direction:column;gap:18px">
+                <div style="display:flex;gap:14px;align-items:baseline">
+                  <span style="color:var(--acc);font-size:12px">◆</span>
+                  <p style="margin:0;font-size:13px;line-height:1.8;color:var(--fg-2)">The hollow outer carbon fiber shaft allows for a very rigid and lightweight putter.</p>
+                </div>
+                <div style="display:flex;gap:14px;align-items:baseline">
+                  <span style="color:var(--acc);font-size:12px">◆</span>
+                  <p style="margin:0;font-size:13px;line-height:1.8;color:var(--fg-2)">3D printed collars with set screws clamp the thin shaft sections together without damaging the brittle composite.</p>
+                </div>
+              </div>
+              <div style="background:var(--panel-2);border:1px solid var(--line);padding:10px">
+                <div class="fig" style="aspect-ratio:3/4">
+                  <img src="assets/robotic-putter-f3.webp" alt="The assembled CZERVIK MK 0 on a workbench: grip-end electronics, the full carbon-fiber shaft with a printed clamp collar, and the geared head" width="900" height="1200" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+                  <div class="cap">FIG 03 / MK 0 ASSEMBLY</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="s06" class="sec mpad rv" style="padding:34px 40px 44px;scroll-margin-top:20px">
+            <h3 class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin:0 0 20px;font-weight:400">06 / PID-DRIVEN CONTROLS</h3>
+            <div class="feat-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start">
+              <div style="background:var(--panel-2);border:1px solid var(--line);padding:10px">
+                <div class="fig" style="aspect-ratio:4/3">
+                  <img src="assets/robotic-putter-f2.webp" alt="The MK 0 grip-end module: a 3D printed housing carrying the prototype board, screw terminals and power resistors at the top of the shaft" width="1200" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+                  <div class="cap">FIG 04 / GRIP-END MODULE</div>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:18px">
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="color:var(--acc);font-size:12px">◆</span>
+                <p style="margin:0;max-width:100%;font-size:13px;line-height:1.8;color:var(--fg-2)">Field-Oriented Control (FOC) motor drivers allow for positional control of cheap brushless DC motors.</p>
+              </div>
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="color:var(--acc);font-size:12px">◆</span>
+                <p style="margin:0;max-width:100%;font-size:13px;line-height:1.8;color:var(--fg-2)">For initial testing, a two-phase PID control system was used, which used the backswing to predict the time of impact.</p>
+              </div>
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="color:var(--acc);font-size:12px">◆</span>
+                <p style="margin:0;max-width:100%;font-size:13px;line-height:1.8;color:var(--fg-2)">Future work will focus on generalizing from tremor rejection to all disturbance rejection, allowing for perfect putts every time.</p>
+              </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
