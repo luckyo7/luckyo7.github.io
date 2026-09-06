@@ -112,6 +112,8 @@ a:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
   .proj-grid{grid-template-columns:1fr!important}
   .d-title{font-size:40px!important}
   .spec-bar{grid-template-columns:1fr 1fr!important}
+  /* an odd cell out would leave half a row empty, so let it span instead */
+  .spec-bar>div:nth-child(3):last-child{grid-column:1/-1}
   .overview-grid{grid-template-columns:1fr!important;gap:12px!important}
   .feat-grid{grid-template-columns:1fr!important}
   .res-title{font-size:40px!important}
