@@ -121,7 +121,11 @@
           <a class="nl" href="#s02" style="text-decoration:none;color:var(--fg-2)">02 &nbsp;WHY IT MATTERS</a>
           <a class="nl" href="#s03" style="text-decoration:none;color:var(--fg-2)">03 &nbsp;CONSTRAINTS</a>
           <a class="nl" href="#s04" style="text-decoration:none;color:var(--fg-2)">04 &nbsp;WHAT WE BUILT</a>
-          <a class="nl" href="#s05" style="text-decoration:none;color:var(--fg-2)">05 &nbsp;IMPACT</a>
+          <a class="nl" href="#s05" style="text-decoration:none;color:var(--fg-2)">05 &nbsp;VALIDATION</a>
+          <a class="nl" href="#s05a" style="text-decoration:none;color:var(--fg-5);display:flex;gap:7px;padding-left:12px"><span style="flex:none">05.a</span><span>MRI COMPATIBILITY</span></a>
+          <a class="nl" href="#s05b" style="text-decoration:none;color:var(--fg-5);display:flex;gap:7px;padding-left:12px"><span style="flex:none">05.b</span><span>STIMULUS TIMING</span></a>
+          <a class="nl" href="#s05c" style="text-decoration:none;color:var(--fg-5);display:flex;gap:7px;padding-left:12px"><span style="flex:none">05.c</span><span>EVOKED RESPONSE</span></a>
+          <a class="nl" href="#s06" style="text-decoration:none;color:var(--fg-2)">06 &nbsp;IMPACT</a>
         </div>
         <div>
           <div id="s01" class="sec mpad" style="padding:34px 40px;border-bottom:1px solid var(--line)">
@@ -156,8 +160,50 @@
               <div style="position:absolute;bottom:8px;left:8px;font-size:9px;letter-spacing:.1em;color:var(--fg-4);background:rgba(11,12,13,.75);padding:3px 7px">FIG 02 / EXPLODED VIEW</div>
             </div>
           </div>
-          <div id="s05" class="sec mpad" style="padding:30px 40px 40px">
-            <h2 class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin-bottom:20px;font-weight:400;margin-top:0">05 / IMPACT</h2>
+          <div class="mpad" style="padding:30px 40px 0">
+            <h2 id="s05" class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin:0;font-weight:400;scroll-margin-top:20px">05 / VALIDATION</h2>
+          </div>
+          <div id="s05a" class="sec mpad" style="padding:22px 40px 30px;border-bottom:1px solid var(--line);scroll-margin-top:20px">
+            <h3 class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin:0 0 20px;font-weight:400;color:var(--fg-5)">05.a / MRI COMPATIBILITY</h3>
+            <div class="feat-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:30px">
+              <div>
+                <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line-frame);background:var(--frame);overflow:hidden">
+                  <div style="position:absolute;inset:0">
+                    <img src="assets/mousevr-f1.webp" alt="The MouseVR optical front end on its printed sled — driver board, display with Fresnel eyepiece, and monitoring camera — staged at the mouth of the scanner bore" width="1200" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain">
+                  </div>
+                  <div style="position:absolute;bottom:8px;left:8px;font-size:9px;letter-spacing:.1em;color:var(--fg-4);background:rgba(11,12,13,.75);padding:3px 7px">FIG 03 / COMPATIBILITY SETUP</div>
+                </div>
+                <p style="margin:14px 0 0;font-size:12.5px;line-height:1.85;color:var(--fg-4)">To test the MRI compatibility of the system, an MRI-compatible camera was used to record the display while inside the scanner&rsquo;s bore.</p>
+              </div>
+              <div>
+                <div style="position:relative;aspect-ratio:4/3;border:1px solid var(--line-frame);background:var(--frame);overflow:hidden">
+                  <div style="position:absolute;inset:0">
+                    <img src="assets/mousevr-f2.gif" alt="Camera view back through the eyepiece with the system inside the magnet, showing the display rendering an animation" width="520" height="390" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain">
+                  </div>
+                  <div style="position:absolute;bottom:8px;left:8px;font-size:9px;letter-spacing:.1em;color:var(--fg-4);background:rgba(11,12,13,.75);padding:3px 7px">FIG 04 / IN-BORE DISPLAY</div>
+                </div>
+                <p style="margin:14px 0 0;font-size:12.5px;line-height:1.85;color:var(--fg-4)">Recordings of the display inside the bore show that the display system is functional while inside the scanner.</p>
+              </div>
+            </div>
+          </div>
+          <div id="s05b" class="sec mpad" style="padding:22px 40px 26px;border-bottom:1px solid var(--line);scroll-margin-top:20px">
+            <h3 class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin:0 0 20px;font-weight:400;color:var(--fg-5)">05.b / STIMULUS TIMING</h3>
+            <div style="display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.12em;color:var(--fg-6)">
+              <span style="width:7px;height:7px;border:1px solid var(--fg-6);transform:rotate(45deg);flex:none" aria-hidden="true"></span>
+              <span>PENDING</span>
+              <div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--rule) 0 6px,transparent 6px 10px)"></div>
+            </div>
+          </div>
+          <div id="s05c" class="sec mpad" style="padding:22px 40px 26px;border-bottom:1px solid var(--line);scroll-margin-top:20px">
+            <h3 class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin:0 0 20px;font-weight:400;color:var(--fg-5)">05.c / EVOKED RESPONSE</h3>
+            <div style="display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.12em;color:var(--fg-6)">
+              <span style="width:7px;height:7px;border:1px solid var(--fg-6);transform:rotate(45deg);flex:none" aria-hidden="true"></span>
+              <span>PENDING</span>
+              <div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--rule) 0 6px,transparent 6px 10px)"></div>
+            </div>
+          </div>
+          <div id="s06" class="sec mpad" style="padding:30px 40px 40px">
+            <h2 class="sec-label" style="font-size:9.5px;letter-spacing:.14em;margin-bottom:20px;font-weight:400;margin-top:0">06 / IMPACT</h2>
             <div class="feat-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:30px">
               <div>
                 <div style="font-size:9.5px;letter-spacing:.14em;color:var(--fg-6);margin-bottom:12px">FOR THE FIELD</div>
