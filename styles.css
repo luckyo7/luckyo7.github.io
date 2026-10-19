@@ -125,6 +125,18 @@ a:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
   .wordmark{font-size:60px!important}
 }
 
+/* the Initial Design sheet stacks before its two columns squeeze the figure */
+@media(max-width:1024px){
+  .sheet-row{flex-direction:column!important}
+  /* the flex bases are widths side by side, heights once stacked - drop them */
+  .sheet-cell,.sheet-side{flex:0 0 auto!important}
+  .sheet-cell{border-right:0!important}
+  .sheet-side{border-top:1px solid var(--line-frame)}
+}
+@media(max-width:760px){
+  .sheet-wrap{padding-left:10px!important;padding-right:10px!important}
+}
+
 /* the site's motion is hover-only and short, but honour the preference anyway */
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{
