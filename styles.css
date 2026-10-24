@@ -62,7 +62,7 @@ a:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
 
 /* mousevr numbered sections */
 .sec-label{transition:color .2s}
-.sec:hover .sec-label,.sec:focus-within .sec-label{color:var(--acc)}
+.sec:hover .sec-label,.sec:focus-within .sec-label{color:var(--acc)!important}
 
 /* project pages: figure plates. The frame lives here (not inline) so the hover
    colour can actually win, and the caption warms up with it. */
